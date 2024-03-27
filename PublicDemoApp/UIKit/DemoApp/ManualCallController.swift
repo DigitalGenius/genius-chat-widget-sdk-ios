@@ -48,11 +48,9 @@ private extension ManualCallController {
         NSLayoutConstraint.activate(constraints)
         view.backgroundColor = .systemBackground
         
-        let hideBarButton = UIBarButtonItem(title: "Hide Chat", style: .done, target: self, action: #selector(hideChatView))
-        self.navigationItem.rightBarButtonItems = [hideBarButton]
-        
-        let reframeBarButton = UIBarButtonItem(title: "Reframe", style: .done, target: self, action: #selector(reframe))
-        self.navigationItem.rightBarButtonItems = [reframeBarButton, hideBarButton]
+        let hideBarButton = UIBarButtonItem(title: "Hide", style: .done, target: self, action: #selector(hideChatView))
+        let minimiseBarButton = UIBarButtonItem(title: "Minimise", style: .done, target: self, action: #selector(minimiseChat))
+        self.navigationItem.rightBarButtonItems = [minimiseBarButton, hideBarButton]
     }
 }
 
@@ -78,7 +76,9 @@ extension ManualCallController {
         controlsView.hideWidget()
     }
     
-    @objc private func reframe() {
-        DGChat.prepare { webView in }
+    @objc private func minimiseChat() {
+        DGChat.minimizeWidget { _ in
+            
+        }
     }
 }

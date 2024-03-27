@@ -45,11 +45,18 @@ private extension StraightForwardController {
         NSLayoutConstraint.activate(constraints)
         view.backgroundColor = .systemBackground
         
-        let hideBarButton = UIBarButtonItem(title: "Hide Chat", style: .done, target: self, action: #selector(hideChatView))
-        self.navigationItem.rightBarButtonItem = hideBarButton
+        let hideBarButton = UIBarButtonItem(title: "Hide", style: .done, target: self, action: #selector(hideChatView))
+        let minimiseBarButton = UIBarButtonItem(title: "Minimise", style: .done, target: self, action: #selector(minimiseChat))
+        self.navigationItem.rightBarButtonItems = [minimiseBarButton, hideBarButton]
     }
     
     @objc func hideChatView() {
         controlsView.hideWidget()
+    }
+    
+    @objc private func minimiseChat() {
+        DGChat.minimizeWidget { _ in
+            
+        }
     }
 }
