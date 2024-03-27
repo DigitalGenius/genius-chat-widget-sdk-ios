@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
+   <Group
+      location = "group:Sources"
+      name = "Sources">
+      <Group
+         location = "group:DGChatWidgetPackage"
+         name = "DGChatWidgetPackage">
+         <FileRef
+            location = "group:DGChatWidgetPackage.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:PublicDemoApp/SwiftUI"
+      name = "SwiftUI">
+      <FileRef
+         location = "group:SwiftUIDemo.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:SwiftUIDemo"
+         name = "SwiftUIDemo">
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:AccentColor.colorset"
+               name = "AccentColor.colorset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Preview Content"
+            name = "Preview Content">
+            <Group
+               location = "group:Preview Assets.xcassets"
+               name = "Preview Assets.xcassets">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:SwiftUIDemoApp.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ContentView.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:PublicDemoApp/UIKit"
+      name = "UIKit">
+      <FileRef
+         location = "group:DemoApp.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:DemoApp"
+         name = "DemoApp">
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ManualCallController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SDKDelegateObject.swift">
+         </FileRef>
+         <FileRef
+            location = "group:StraightForwardController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:CustomAnimationController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ToggleView.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:AccentColor.colorset"
+               name = "AccentColor.colorset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:ControlsView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:LoadyButton.swift">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SceneDelegate.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
