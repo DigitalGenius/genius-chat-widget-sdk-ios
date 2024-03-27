@@ -10,7 +10,7 @@ docs/
 *.zip
 /html_docs
 Package.resolved
-/.swiftpm/
+.swiftpm/
 
 ## Various settings
 *.pbxuser
