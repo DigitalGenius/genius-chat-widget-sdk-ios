@@ -1,0 +1,224 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DGChatSDK
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Swift.BidirectionalCollection {
+  @inlinable public func suffix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.SubSequence {
+    try self[startOfSuffix(while: predicate)...]
+  }
+}
+extension Swift.Collection {
+  @inlinable internal func endOfPrefix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.Index {
+    var index = startIndex
+    while try index != endIndex && predicate(self[index]) {
+      formIndex(after: &index)
+    }
+    return index
+  }
+}
+extension Swift.BidirectionalCollection {
+  @inlinable internal func startOfSuffix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.Index {
+    var index = endIndex
+    while index != startIndex {
+      let after = index
+      formIndex(before: &index)
+      if try !predicate(self[index]) {
+        return after
+      }
+    }
+    return index
+  }
+}
+extension Swift.Collection {
+  @inlinable public func trimmingPrefix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.SubSequence {
+    let start = try endOfPrefix(while: predicate)
+    return self[start...]
+  }
+}
+extension Swift.Collection where Self : Swift.RangeReplaceableCollection {
+  @inlinable @_disfavoredOverload public mutating func trimPrefix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    let end = try endOfPrefix(while: predicate)
+    removeSubrange(startIndex..<end)
+  }
+}
+extension Swift.Collection where Self == Self.SubSequence {
+  @inlinable public mutating func trimPrefix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    self = try trimmingPrefix(while: predicate)
+  }
+}
+extension Swift.BidirectionalCollection {
+  @inlinable public func trimming(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.SubSequence {
+    try trimmingPrefix(while: predicate).trimmingSuffix(while: predicate)
+  }
+  @inlinable public func trimmingSuffix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.SubSequence {
+    let end = try startOfSuffix(while: predicate)
+    return self[..<end]
+  }
+}
+extension Swift.BidirectionalCollection where Self : Swift.RangeReplaceableCollection {
+  @inlinable @_disfavoredOverload public mutating func trim(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    try trimSuffix(while: predicate)
+    try trimPrefix(while: predicate)
+  }
+  @inlinable @_disfavoredOverload public mutating func trimSuffix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    let start = try startOfSuffix(while: predicate)
+    removeSubrange(start..<endIndex)
+  }
+}
+extension Swift.BidirectionalCollection where Self == Self.SubSequence {
+  @inlinable public mutating func trim(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    self = try trimming(while: predicate)
+  }
+  @inlinable public mutating func trimSuffix(while predicate: (Self.Element) throws -> Swift.Bool) rethrows {
+    self = try trimmingSuffix(while: predicate)
+  }
+}
+@_hasMissingDesignatedInitializers public class DGChat {
+  @objc deinit
+}
+extension DGChatSDK.DGChat {
+  public static var isPresented: Swift.Bool {
+    get
+  }
+  public static var delegate: (any DGChatSDK.DGChatDelegate)? {
+    get
+    set
+  }
+}
+extension DGChatSDK.DGChat {
+  public static func prepare(_ completion: ((UIKit.UIView?) -> Swift.Void)?)
+  public static func added(to hostController: UIKit.UIViewController, animated: Swift.Bool = true, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  public static func added(to view: UIKit.UIView, animted: Swift.Bool = true, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  public static func hide(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+}
+extension DGChatSDK.DGChat {
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  public static func prepare() async -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func added(to hostController: UIKit.UIViewController, animated: Swift.Bool = true) async -> UIKit.UIView
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func added(to view: UIKit.UIView, animated: Swift.Bool = true) async -> UIKit.UIView
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func hide(animated: Swift.Bool = true) async
+  #endif
+}
+@available(*, deprecated, message: "Please use 'DGChat' instead")
+public typealias DGChatManager = DGChatSDK.DGChat
+public enum DGChatAction : Swift.String {
+  case onChatMinimizeClick
+  case onChatLauncherClick
+  case onChatEndClick
+  case onChatProactiveButtonClick
+  case onCSATPopoverCloseClicked
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Swift.Character {
+  public var isSlash: Swift.Bool {
+    get
+  }
+  public var isCodeBlock: Swift.Bool {
+    get
+  }
+}
+public protocol DGChatDelegate : AnyObject {
+  func didTrack(action: DGChatSDK.DGChatAction)
+  func didAttemptToOpen(url: Foundation.URL)
+  func didFailWith(error: any Swift.Error)
+  var widgetId: Swift.String { get }
+  var env: Swift.String { get }
+  var scriptVersion: Swift.String { get }
+  var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
+  var metadata: Swift.String { get }
+}
+public struct DGChatCRMCredentials {
+  public let platform: Swift.String
+  public let version: Swift.String
+  public init(platform: Swift.String, version: Swift.String)
+}
+extension DGChatSDK.DGChatDelegate where Self : UIKit.UIViewController {
+  public func didAttemptToOpen(url: Foundation.URL)
+}
+extension DGChatSDK.DGChatDelegate {
+  public func didTrack(action: DGChatSDK.DGChatAction)
+  public func didAttemptToOpen(url: Foundation.URL)
+  public func didFailWith(error: any Swift.Error)
+  public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
+    get
+  }
+  public var metadata: Swift.String {
+    get
+  }
+}
+extension DGChatSDK.DGChat {
+  public static func sendMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sendMessage(_ message: Swift.String) async throws
+  #endif
+  public static func expandWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func launchWidget() async throws
+  #endif
+  public static func initProactiveButtons(values: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func initProactiveButtons(values: Swift.String) async throws
+  #endif
+  public static func minimizeWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func minimizeWidget() async throws
+  #endif
+}
+public struct GeniusChatView : SwiftUI.UIViewRepresentable {
+  public let widgetId: Swift.String
+  public let env: Swift.String
+  public let scriptVersion: Swift.String
+  public let crmCredentials: DGChatSDK.DGChatCRMCredentials?
+  public let metadata: Swift.String
+  public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
+  public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
+  public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
+  public init(widgetId: Swift.String, env: Swift.String, scriptVersion: Swift.String, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, metadata: Swift.String = "", onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
+  @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
+  @objc @_hasMissingDesignatedInitializers final public class Coordinator : ObjectiveC.NSObject, DGChatSDK.DGChatDelegate {
+    final public func didTrack(action: DGChatSDK.DGChatAction)
+    final public func didAttemptToOpen(url: Foundation.URL)
+    final public func didFailWith(error: any Swift.Error)
+    final public var widgetId: Swift.String {
+      get
+    }
+    final public var env: Swift.String {
+      get
+    }
+    final public var scriptVersion: Swift.String {
+      get
+    }
+    final public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
+      get
+    }
+    final public var metadata: Swift.String {
+      get
+    }
+    @objc deinit
+  }
+  public typealias Body = Swift.Never
+  public typealias UIViewType = UIKit.UIView
+}
+extension DGChatSDK.DGChatAction : Swift.Equatable {}
+extension DGChatSDK.DGChatAction : Swift.Hashable {}
+extension DGChatSDK.DGChatAction : Swift.RawRepresentable {}
