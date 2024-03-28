@@ -1,7 +1,7 @@
 # DGChatSDK
 
 <div align="center">
-   <img width="600px" src="./Sources/DGChatSDK/DGChatSDK.docc/Resources/logo-dark.svg" alt="Logo">
+   <img width="600px" src="./Sources/DGChatWidgetPackage/Resources/logo-dark.svg" alt="Logo">
 </div>
 
 <!--![DigitalGeniusLogo](logo-dark.svg)-->
