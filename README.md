@@ -163,6 +163,16 @@ DGChat.added(to: self) { [weak self] chatView in
 }
 ```
 
+It can be noticed that in each call of:
+ 
+```swift
+func added(to: UIViewController, animated: Bool, completion: ((UIView) -> Void)?)`
+```
+
+is that completion closure produces UIView object which is a reference to an overlay view used by DGChat SDK to represent all needed information. 
+**You can use that reference to show, hide, move, adjust size and perform any other actions available for UIView to adjust DGChat's placement, appearance and etc. according to your needs and your particular project.**
+Example on how that UIView can be manipulated can be found in `CustomAnimationController.swift`.  
+
 ### SwiftUI
 
 If you are using SwiftUI for your project, please use `GeniusChatView` as listed on the example below:
