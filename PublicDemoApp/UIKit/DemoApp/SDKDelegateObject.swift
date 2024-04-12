@@ -18,13 +18,15 @@ final class SDKDelegateObject: DGChatDelegate {
 
 extension SDKDelegateObject {
     
-    func didTrack(action: DGChatSDK.DGChatAction) {
+    func didTrack(action: DGChatAction) {
         print("Action track:", action)
     }
     
     func didAttemptToOpen(url: URL) {
         let safari = SFSafariViewController(url: url)
-        self.presenter?.present(safari, animated: true)
+        if let controller = self.presenter {
+            controller.present(safari, animated: true)
+        }
     }
     
     func didFailWith(error: Error) {
