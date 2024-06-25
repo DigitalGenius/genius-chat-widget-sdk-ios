@@ -1,7 +1,7 @@
 import UIKit
 import DGChatSDK
 
-final class ManualCallController: UIViewController {
+final class WindowCallController: UIViewController {
     
     final var delegateObj = SDKDelegateObject()
     
@@ -13,16 +13,25 @@ final class ManualCallController: UIViewController {
     
     final private lazy var startButton: LoadyButton = {
         let button = LoadyButton(type: .roundedRect)
-        button.setTitle("Show ChatView", for: .normal)
+        button.setTitle("Show ChatView over Main Window", for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(showChatView), for: .touchUpInside)
         button.indicatorColor = .gray
+        return button
+    }()
+    
+    final private lazy var presentButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Push controller for test", for: .normal)
+        button.tintColor = .systemBlue
+        button.addTarget(self, action: #selector(presentTestController), for: .touchUpInside)
         button.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     final private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [startButton, controlsView])
+        let stackView = UIStackView(arrangedSubviews: [startButton, presentButton, controlsView])
         stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .fill
@@ -36,7 +45,7 @@ final class ManualCallController: UIViewController {
     }
 }
 
-private extension ManualCallController {
+private extension WindowCallController {
     
     func setupUI() {
         view.addSubview(stackView)
@@ -50,14 +59,16 @@ private extension ManualCallController {
         view.backgroundColor = .systemBackground
         
         let hideBarButton = UIBarButtonItem(title: "Hide Chat", style: .done, target: self, action: #selector(hideChatView))
-        self.navigationItem.rightBarButtonItems = [hideBarButton]
-        
-        let reframeBarButton = UIBarButtonItem(title: "Reframe", style: .done, target: self, action: #selector(reframe))
-        self.navigationItem.rightBarButtonItems = [reframeBarButton, hideBarButton]
+        self.navigationItem.rightBarButtonItem = hideBarButton
     }
 }
 
-extension ManualCallController {
+extension WindowCallController {
+    
+    @objc private func presentTestController() {
+        let vc = TestController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @objc private func showChatView() {
         // Check if ChatView is not presented yet.
@@ -69,7 +80,12 @@ extension ManualCallController {
         // Start animating button's spinner
         startButton.setSpinner(shown: true)
         // Present ChatView overlay
-        DGChat.added(to: self) { [weak self] chatView in
+        guard let mainWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+            print("Check your hierarchy with ViewDebugger or check your code to be sure that it returns correct view instance.")
+            return
+        }
+
+        DGChat.added(to: mainWindow) { [weak self] chatView in
             print("ChatView shown with frame \(chatView.frame)")
             self?.startButton.setSpinner(shown: false)
         }
@@ -77,9 +93,5 @@ extension ManualCallController {
     
     @objc private func hideChatView() {
         controlsView.hideWidget()
-    }
-    
-    @objc private func reframe() {
-        DGChat.prepare { webView in }
     }
 }

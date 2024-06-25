@@ -8,7 +8,7 @@ let package = Package(
     platforms: [
         .iOS(.v13),
     ],
-    products: [.
+    products: [
         .library(
             name: "DGChatWidgetPackage",
             targets: ["DGChatWidgetPackage"]),
