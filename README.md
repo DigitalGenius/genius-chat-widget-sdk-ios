@@ -23,7 +23,9 @@ This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an
 
 A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` and `scriptVersion` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
 
-Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. Originally developed using **UIKit** with custumizable SiwftUI wrapper for flexibility on user end. For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) documentation section.
+Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. **Originally developed using UIKit** with SiwftUI wrapper for flexibility on user end. 
+
+For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) documentation section.
 
 ## Installation 
 
@@ -94,8 +96,15 @@ var scriptVersion: String {
 
 > ⚠️ It is highly important to provide ``DGChatDelegate.scriptVersion`` as a [Semantic versioning three-part version number](https://en.wikipedia.org/wiki/Software_versioning). Otherwise, you'll encounter runtime error.
 
-And finally, just call ``DGChat/added(to:animated:completion:)`` to present a chat button on top of specified ViewController.
-Also there is support of presenting chat over UIView using ``DGChat/added(to:animated:completion:)``, example also provided , this gives additional ways of usage, for e.g. adding widget to PopUp or some custom containers and even over App Window if needed. Same could be also done with UIViewController approach.
+And finally, just call ``DGChat.added(to:animated:completion:)`` to present a chat button on top of specified ViewController.
+
+```swift
+DGChat.added(to: self) { [weak self] chatView in
+    print("ChatView shown with frame \(chatView.frame)")
+}
+```
+
+Also there is support of presenting chat over UIView using ``DGChat.added(to:animated:completion:)``, example also provided , this gives additional ways of usage, for e.g. adding widget to PopUp or some custom containers and even over App Window if needed. Same could be also done with UIViewController approach.
 
 ## Using Widget metadata
 
@@ -155,15 +164,17 @@ See [full methods list](https://docs.digitalgenius.com/docs/methods) for more de
 
 The interaction model and example usage can be found in Demo project. Please note that all DGChatDelegate methods are implemented in one isolated instance for ease of use, but it's **not** a requirement.
 
+Project UI root is UITabBarController which holds few UIViewControllers. Each one represents a particular way of DGChatSDK usage. 
+
 `ManualCallController.swift` - demonstrates a step-by-step call of DGChatSDK from user-defined UI.
+
 `StraightForwardController.swift` - can be useful example for those cases, when you need to present Chat Widget during view presentation process.
+
 `CustomAnimationController.swift` - provides an example of custom animation added to presentation/dismissal process of Chat Widget. 
 
-```swift
-DGChat.added(to: self) { [weak self] chatView in
-    print("ChatView shown with frame \(chatView.frame)")
-}
-```
+`NavigationCallController.swift` - gives an idea on how to keep DGChat widget running across different ViewControllers pushed to the stack.
+
+> 💭 Please note: All  examples above are listed for educational purpose and do not require developer only to copy-paste code from that examples. The only requrenemnt is to initialize an SDK first and then <u>you're free to manipulate UIView that will be returned in completion closure</u> of ``DGChat.added(to:animated:completion:)`` method or it's overrides.
 
 ### SwiftUI
 
@@ -181,7 +192,9 @@ var body: some View {
 }
 ```
 
-`GeniusChatView` implementation provided inside SwiftUI Demo Example so you can customize it according to your own app requirements or create your own wrapper based on provided example.
+`GeniusChatView` is SwiftUI View which is a wrapper for UIKit code of DGChatSDK using Apple's [Coordinator pattern](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit). 
+
+`GeniusChatView` supports all the same methods of DGChatSDK.
 
 ### ReactNative
 
