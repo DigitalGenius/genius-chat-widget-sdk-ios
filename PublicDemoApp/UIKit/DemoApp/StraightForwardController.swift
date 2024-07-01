@@ -5,12 +5,6 @@ final class StraightForwardController: UIViewController {
 
     final var delegateObj = SDKDelegateObject()
     
-    lazy final private var controlsView: ControlsView = {
-        let view = ControlsView(frame: .zero)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,28 +29,14 @@ final class StraightForwardController: UIViewController {
 private extension StraightForwardController {
     
     func setupUI() {
-        view.addSubview(controlsView)
-        let constraints = [
-            controlsView.topAnchor.constraint(equalTo: view.topAnchor, constant: 180),
-            controlsView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            controlsView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            controlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
-        ]
-        NSLayoutConstraint.activate(constraints)
-        view.backgroundColor = .systemBackground
-        
-        let hideBarButton = UIBarButtonItem(title: "Hide", style: .done, target: self, action: #selector(hideChatView))
-        let minimiseBarButton = UIBarButtonItem(title: "Minimise", style: .done, target: self, action: #selector(minimiseChat))
-        self.navigationItem.rightBarButtonItems = [minimiseBarButton, hideBarButton]
+        let hideBarButton = UIBarButtonItem(title: "Hide Chat", 
+                                            style: .done,
+                                            target: self,
+                                            action: #selector(hideChatView))
+        self.navigationItem.rightBarButtonItem = hideBarButton
     }
     
     @objc func hideChatView() {
-        controlsView.hideWidget()
-    }
-    
-    @objc private func minimiseChat() {
-        DGChat.minimizeWidget { _ in
-            
-        }
+        ControlsView().hideWidget()
     }
 }

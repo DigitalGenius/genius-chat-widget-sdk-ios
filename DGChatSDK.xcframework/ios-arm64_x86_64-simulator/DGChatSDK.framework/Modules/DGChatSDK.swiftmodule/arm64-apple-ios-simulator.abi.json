@@ -2032,7 +2032,7 @@
         "declKind": "Import",
         "moduleName": "DGChatSDK",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -4356,15 +4356,22 @@
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 431,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 448,
+      "offset": 497,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 519,
+      "offset": 568,
       "length": 3,
       "value": "3.0"
     },
@@ -4476,49 +4483,56 @@
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 324,
+      "offset": 345,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 621,
+      "offset": 642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 912,
+      "offset": 933,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1104,
+      "offset": 1125,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1145,
+      "offset": 1166,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1221,
+      "offset": 1242,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12293,
+      "offset": 2218,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12797,
       "length": 1,
       "value": "0"
     },

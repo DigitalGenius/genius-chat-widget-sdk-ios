@@ -20,7 +20,7 @@ final class CustomAnimationController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [toggle, visibilityButton])
         stackView.alignment = .center
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -36,10 +36,10 @@ private extension CustomAnimationController {
     func setupUI() {
         view.addSubview(stackView)
         let constraints = [
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: 200),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor),
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ]
         NSLayoutConstraint.activate(constraints)
         view.backgroundColor = .systemBackground

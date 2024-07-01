@@ -3,28 +3,23 @@ import DGChatSDK
 
 final class ControlsView: UIView {
     
-    final private lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.placeholder = "TextField for input tests"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.heightAnchor.constraint(equalToConstant: 52).isActive = true
-        return textField
-    }()
-    
     final private lazy var mesageButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("Send test message", for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(testMethods), for: .touchUpInside)
+        button.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     final private lazy var expandButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Expand Widget", for: .normal)
+        button.setTitle("Expand ChatView", for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(expandWidget), for: .touchUpInside)
+        button.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -33,11 +28,14 @@ final class ControlsView: UIView {
         button.setTitle("Hide ChatView", for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(hideWidget), for: .touchUpInside)
+        button.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     final private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [textField, expandButton, mesageButton, hideChatButton])
+        let subviews = [expandButton, hideChatButton, mesageButton]
+        let stackView = UIStackView(arrangedSubviews: subviews)
         stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
@@ -80,7 +78,6 @@ extension ControlsView {
     }
     
     @objc func expandWidget() {
-        textField.resignFirstResponder()
         
         DGChat.expandWidget { result in
             switch result {

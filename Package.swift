@@ -6,27 +6,21 @@ import PackageDescription
 let package = Package(
     name: "DGChatWidgetPackage",
     platforms: [
-        .iOS(.v13), // Adjust the platform version as needed
+        .iOS(.v13),
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "DGChatWidgetPackage",
             targets: ["DGChatWidgetPackage"]),
     ],
-    dependencies: [
-        // Add any dependencies here
-    ],
+    dependencies: [ ],
     targets: [
         .binaryTarget(
             name: "DGChatSDK",
-            path: "DGChatSDK.xcframework" // Adjust the path to your XCFramework
+            path: "DGChatSDK.xcframework"
         ),
         .target(
             name: "DGChatWidgetPackage",
-            dependencies: ["DGChatSDK"]), // Add the binary target as a dependency
-        .testTarget(
-            name: "DGChatWidgetPackageTests",
-            dependencies: ["DGChatWidgetPackage"]),
+            dependencies: ["DGChatSDK"]),
     ]
 )
