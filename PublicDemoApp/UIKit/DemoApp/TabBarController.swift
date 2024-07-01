@@ -8,11 +8,11 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupControllers() {
-        let manualCallController = UINavigationController(rootViewController: ManualCallController())
-        manualCallController.tabBarItem.title = "Manual"
-        
         let straightforwardController = UINavigationController(rootViewController: StraightForwardController())
         straightforwardController.tabBarItem.title = "Straight"
+        
+        let manualCallController = UINavigationController(rootViewController: ManualCallController())
+        manualCallController.tabBarItem.title = "Manual"
         
         let customAnimationController = UINavigationController(rootViewController: CustomAnimationController())
         customAnimationController.tabBarItem.title = "Custom"
@@ -23,6 +23,12 @@ final class TabBarController: UITabBarController {
         let windowController = UINavigationController(rootViewController: WindowCallController())
         windowController.tabBarItem.title = "Window"
         
-        viewControllers = [straightforwardController, manualCallController, customAnimationController, navigationController, windowController]
+        self.viewControllers = [
+            straightforwardController,
+            manualCallController,
+            customAnimationController,
+            navigationController,
+            windowController
+        ]
     }
 }

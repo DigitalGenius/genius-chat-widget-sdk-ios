@@ -7,28 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A016F3392BB45F5900A75D47 /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A016F3382BB45F5900A75D47 /* DGChatWidgetPackage */; };
 		A0F9704A2A48BF0A00CB21ED /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F970492A48BF0A00CB21ED /* SwiftUIDemoApp.swift */; };
 		A0F9704C2A48BF0A00CB21ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9704B2A48BF0A00CB21ED /* ContentView.swift */; };
 		A0F9704E2A48BF0B00CB21ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F9704D2A48BF0B00CB21ED /* Assets.xcassets */; };
 		A0F970512A48BF0B00CB21ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F970502A48BF0B00CB21ED /* Preview Assets.xcassets */; };
-		A0F970592A48C30000CB21ED /* DGChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A0F970582A48C30000CB21ED /* DGChatSDK */; };
-		A0F9705A2A48C30000CB21ED /* DGChatSDK in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A0F970582A48C30000CB21ED /* DGChatSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A0FB49032C33424E0028126D /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A0FB49022C33424E0028126D /* DGChatWidgetPackage */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A0F9705B2A48C30000CB21ED /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A0F9705A2A48C30000CB21ED /* DGChatSDK in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A0F970462A48BF0A00CB21ED /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A016F3392BB45F5900A75D47 /* DGChatWidgetPackage in Frameworks */,
-				A0F970592A48C30000CB21ED /* DGChatSDK in Frameworks */,
+				A0FB49032C33424E0028126D /* DGChatWidgetPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +87,6 @@
 				A0F970422A48BF0A00CB21ED /* Sources */,
 				A0F970432A48BF0A00CB21ED /* Frameworks */,
 				A0F970442A48BF0A00CB21ED /* Resources */,
-				A0F9705B2A48C30000CB21ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,8 +94,7 @@
 			);
 			name = SwiftUIDemo;
 			packageProductDependencies = (
-				A0F970582A48C30000CB21ED /* DGChatSDK */,
-				A016F3382BB45F5900A75D47 /* DGChatWidgetPackage */,
+				A0FB49022C33424E0028126D /* DGChatWidgetPackage */,
 			);
 			productName = SwiftUIDemo;
 			productReference = A0F970462A48BF0A00CB21ED /* SwiftUIDemo.app */;
@@ -387,14 +368,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A016F3382BB45F5900A75D47 /* DGChatWidgetPackage */ = {
+		A0FB49022C33424E0028126D /* DGChatWidgetPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A016F3372BB45F5900A75D47 /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
 			productName = DGChatWidgetPackage;
-		};
-		A0F970582A48C30000CB21ED /* DGChatSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DGChatSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

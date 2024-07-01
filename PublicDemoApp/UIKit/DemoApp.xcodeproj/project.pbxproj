@@ -10,42 +10,39 @@
 		18BFFEFD2C2B01A000D8E596 /* NavigationCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFEFC2C2B01A000D8E596 /* NavigationCallController.swift */; };
 		18BFFEFF2C2B01C900D8E596 /* WindowCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFEFE2C2B01C900D8E596 /* WindowCallController.swift */; };
 		18BFFF012C2B025900D8E596 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFF002C2B025900D8E596 /* TabBarController.swift */; };
-		18BFFF032C2B147900D8E596 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFF022C2B147900D8E596 /* TestController.swift */; };
-		A016F3362BB45F4500A75D47 /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A016F3352BB45F4500A75D47 /* DGChatWidgetPackage */; };
 		A02EBA0C2BAC2E570006EE20 /* StraightForwardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA072BAC2E570006EE20 /* StraightForwardController.swift */; };
 		A02EBA0D2BAC2E570006EE20 /* SDKDelegateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA082BAC2E570006EE20 /* SDKDelegateObject.swift */; };
 		A02EBA0E2BAC2E570006EE20 /* ManualCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA092BAC2E570006EE20 /* ManualCallController.swift */; };
 		A02EBA0F2BAC2E570006EE20 /* CustomAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA0A2BAC2E570006EE20 /* CustomAnimationController.swift */; };
-		A02EBA102BAC2E570006EE20 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA0B2BAC2E570006EE20 /* ControlsView.swift */; };
+		A04F92B82C330481005F89CC /* LoadyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F92B52C330478005F89CC /* LoadyButton.swift */; };
+		A04F92B92C330481005F89CC /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F92B62C330478005F89CC /* ToggleView.swift */; };
+		A04F92C02C330CE6005F89CC /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F92BF2C330CE6005F89CC /* ControlsView.swift */; };
 		A0B1720C299B8ECA0091465B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1720B299B8ECA0091465B /* AppDelegate.swift */; };
 		A0B1720E299B8ECA0091465B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1720D299B8ECA0091465B /* SceneDelegate.swift */; };
-		A0B17210299B8ECA0091465B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1720F299B8ECA0091465B /* ViewController.swift */; };
 		A0B17215299B8ECC0091465B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B17214299B8ECC0091465B /* Assets.xcassets */; };
 		A0B17218299B8ECC0091465B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B17216299B8ECC0091465B /* LaunchScreen.storyboard */; };
-		A0BA41322B965CD500D01E8B /* LoadyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA41312B965CD500D01E8B /* LoadyButton.swift */; };
-		A0F9E73B2A48E09300BCE2F2 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9E73A2A48E09300BCE2F2 /* ToggleView.swift */; };
+		A0FB48EC2C33303A0028126D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB48EB2C33303A0028126D /* ChildViewController.swift */; };
+		A0FB49012C3342320028126D /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A0FB49002C3342320028126D /* DGChatWidgetPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18BFFEFC2C2B01A000D8E596 /* NavigationCallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCallController.swift; sourceTree = "<group>"; };
 		18BFFEFE2C2B01C900D8E596 /* WindowCallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCallController.swift; sourceTree = "<group>"; };
 		18BFFF002C2B025900D8E596 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		18BFFF022C2B147900D8E596 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		A02EBA072BAC2E570006EE20 /* StraightForwardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StraightForwardController.swift; sourceTree = "<group>"; };
 		A02EBA082BAC2E570006EE20 /* SDKDelegateObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKDelegateObject.swift; sourceTree = "<group>"; };
 		A02EBA092BAC2E570006EE20 /* ManualCallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualCallController.swift; sourceTree = "<group>"; };
 		A02EBA0A2BAC2E570006EE20 /* CustomAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimationController.swift; sourceTree = "<group>"; };
-		A02EBA0B2BAC2E570006EE20 /* ControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		A04F92B52C330478005F89CC /* LoadyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadyButton.swift; sourceTree = "<group>"; };
+		A04F92B62C330478005F89CC /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		A04F92BF2C330CE6005F89CC /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		A0B17208299B8ECA0091465B /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B1720B299B8ECA0091465B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B1720D299B8ECA0091465B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0B1720F299B8ECA0091465B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0B17214299B8ECC0091465B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B17217299B8ECC0091465B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0B17219299B8ECC0091465B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0BA41312B965CD500D01E8B /* LoadyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadyButton.swift; sourceTree = "<group>"; };
-		A0CBA55729AF55EF0012226D /* DGChatSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DGChatSDK.xcframework; sourceTree = "<group>"; };
-		A0F9E73A2A48E09300BCE2F2 /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		A0FB48EB2C33303A0028126D /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +50,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A016F3362BB45F4500A75D47 /* DGChatWidgetPackage in Frameworks */,
+				A0FB49012C3342320028126D /* DGChatWidgetPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A04F92B72C330478005F89CC /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				A04F92BF2C330CE6005F89CC /* ControlsView.swift */,
+				A04F92B52C330478005F89CC /* LoadyButton.swift */,
+				A04F92B62C330478005F89CC /* ToggleView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		A0B171FF299B8ECA0091465B = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +87,8 @@
 		A0B1720A299B8ECA0091465B /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				A02EBA0B2BAC2E570006EE20 /* ControlsView.swift */,
+				A0FB48EB2C33303A0028126D /* ChildViewController.swift */,
+				A04F92B72C330478005F89CC /* Controls */,
 				A02EBA0A2BAC2E570006EE20 /* CustomAnimationController.swift */,
 				18BFFEFC2C2B01A000D8E596 /* NavigationCallController.swift */,
 				18BFFEFE2C2B01C900D8E596 /* WindowCallController.swift */,
@@ -88,12 +96,8 @@
 				A02EBA072BAC2E570006EE20 /* StraightForwardController.swift */,
 				18BFFF002C2B025900D8E596 /* TabBarController.swift */,
 				A02EBA082BAC2E570006EE20 /* SDKDelegateObject.swift */,
-				A0BA41312B965CD500D01E8B /* LoadyButton.swift */,
-				A0F9E73A2A48E09300BCE2F2 /* ToggleView.swift */,
 				A0B1720B299B8ECA0091465B /* AppDelegate.swift */,
 				A0B1720D299B8ECA0091465B /* SceneDelegate.swift */,
-				18BFFF022C2B147900D8E596 /* TestController.swift */,
-				A0B1720F299B8ECA0091465B /* ViewController.swift */,
 				A0B17214299B8ECC0091465B /* Assets.xcassets */,
 				A0B17216299B8ECC0091465B /* LaunchScreen.storyboard */,
 				A0B17219299B8ECC0091465B /* Info.plist */,
@@ -104,7 +108,6 @@
 		A0B1721F299B8EEB0091465B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0CBA55729AF55EF0012226D /* DGChatSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,7 +129,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				A016F3352BB45F4500A75D47 /* DGChatWidgetPackage */,
+				A0FB49002C3342320028126D /* DGChatWidgetPackage */,
 			);
 			productName = DemoApp;
 			productReference = A0B17208299B8ECA0091465B /* DemoApp.app */;
@@ -157,7 +160,7 @@
 			);
 			mainGroup = A0B171FF299B8ECA0091465B;
 			packageReferences = (
-				A016F3342BB45F4500A75D47 /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
+				A0FB48FF2C3342320028126D /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
 			);
 			productRefGroup = A0B17209299B8ECA0091465B /* Products */;
 			projectDirPath = "";
@@ -185,20 +188,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F9E73B2A48E09300BCE2F2 /* ToggleView.swift in Sources */,
+				A0FB48EC2C33303A0028126D /* ChildViewController.swift in Sources */,
+				A04F92C02C330CE6005F89CC /* ControlsView.swift in Sources */,
+				A04F92B82C330481005F89CC /* LoadyButton.swift in Sources */,
+				A04F92B92C330481005F89CC /* ToggleView.swift in Sources */,
 				18BFFF012C2B025900D8E596 /* TabBarController.swift in Sources */,
 				18BFFEFF2C2B01C900D8E596 /* WindowCallController.swift in Sources */,
 				A02EBA0C2BAC2E570006EE20 /* StraightForwardController.swift in Sources */,
-				A0B17210299B8ECA0091465B /* ViewController.swift in Sources */,
 				18BFFEFD2C2B01A000D8E596 /* NavigationCallController.swift in Sources */,
 				A02EBA0E2BAC2E570006EE20 /* ManualCallController.swift in Sources */,
 				A0B1720C299B8ECA0091465B /* AppDelegate.swift in Sources */,
 				A02EBA0F2BAC2E570006EE20 /* CustomAnimationController.swift in Sources */,
 				A0B1720E299B8ECA0091465B /* SceneDelegate.swift in Sources */,
 				A02EBA0D2BAC2E570006EE20 /* SDKDelegateObject.swift in Sources */,
-				A02EBA102BAC2E570006EE20 /* ControlsView.swift in Sources */,
-				A0BA41322B965CD500D01E8B /* LoadyButton.swift in Sources */,
-				18BFFF032C2B147900D8E596 /* TestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +418,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A016F3342BB45F4500A75D47 /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
+		A0FB48FF2C3342320028126D /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios";
 			requirement = {
@@ -427,9 +429,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A016F3352BB45F4500A75D47 /* DGChatWidgetPackage */ = {
+		A0FB49002C3342320028126D /* DGChatWidgetPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A016F3342BB45F4500A75D47 /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
+			package = A0FB48FF2C3342320028126D /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
 			productName = DGChatWidgetPackage;
 		};
 /* End XCSwiftPackageProductDependency section */

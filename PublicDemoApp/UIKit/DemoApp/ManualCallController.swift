@@ -20,7 +20,7 @@ final class ManualCallController: UIViewController {
         button.heightAnchor.constraint(equalToConstant: 52).isActive = true
         return button
     }()
-    
+
     final private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [startButton, controlsView])
         stackView.alignment = .center
@@ -30,13 +30,13 @@ final class ManualCallController: UIViewController {
         return stackView
     }()
     
+    private var container: UIView?
+    private var isHalfScreen: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
     }
-}
-
-private extension ManualCallController {
     
     func setupUI() {
         view.addSubview(stackView)
@@ -49,11 +49,11 @@ private extension ManualCallController {
         NSLayoutConstraint.activate(constraints)
         view.backgroundColor = .systemBackground
         
-        let hideBarButton = UIBarButtonItem(title: "Hide Chat", style: .done, target: self, action: #selector(hideChatView))
+        let hideBarButton = UIBarButtonItem(title: "Hide Chat", 
+                                            style: .done, 
+                                            target: self,
+                                            action: #selector(hideChatView))
         self.navigationItem.rightBarButtonItems = [hideBarButton]
-        
-        let reframeBarButton = UIBarButtonItem(title: "Reframe", style: .done, target: self, action: #selector(reframe))
-        self.navigationItem.rightBarButtonItems = [reframeBarButton, hideBarButton]
     }
 }
 
@@ -77,9 +77,5 @@ extension ManualCallController {
     
     @objc private func hideChatView() {
         controlsView.hideWidget()
-    }
-    
-    @objc private func reframe() {
-        DGChat.prepare { webView in }
     }
 }

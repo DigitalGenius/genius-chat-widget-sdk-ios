@@ -15,7 +15,7 @@ final class ControlsView: UIView {
 
     final private lazy var expandButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Expand Widget", for: .normal)
+        button.setTitle("Expand ChatView", for: .normal)
         button.tintColor = .systemBlue
         button.addTarget(self, action: #selector(expandWidget), for: .touchUpInside)
         button.heightAnchor.constraint(equalToConstant: 52).isActive = true
