@@ -19,9 +19,11 @@ iOS SDK for DigitalGenius Chat.
 
 ## Overview
 
-This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. This is UIKit based SDK and requires minimal setup. Please refer `Demo.xcworkspace` for an example.
- 
+This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
+
 A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` and `scriptVersion` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
+
+Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. Originally developed using **UIKit** with custumizable SiwftUI wrapper for flexibility on user end. For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) documentation section.
 
 ## Installation 
 
@@ -30,7 +32,7 @@ A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `en
 To get started, add the DGChatSDK package as a dependency to your project:
 
     .package(url: "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git", from: "1.0.0"),
-    
+
 If you're inlcuding this package as a dependecy inside your package, add it to your target using:
 
     .product(name: "DGChatSDK", package: "DGChatSDK"),
@@ -177,8 +179,9 @@ var body: some View {
     }
     .padding()
 }
-GeniusChatView implementation provided inside SwiftUI Demo Example so you can customize it according to your own app requirements or create your own wrapper based on provided example.
 ```
+
+`GeniusChatView` implementation provided inside SwiftUI Demo Example so you can customize it according to your own app requirements or create your own wrapper based on provided example.
 
 ### ReactNative
 
