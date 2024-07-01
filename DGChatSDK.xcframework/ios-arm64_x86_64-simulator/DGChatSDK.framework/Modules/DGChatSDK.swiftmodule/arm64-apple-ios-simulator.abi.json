@@ -79,12 +79,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "DGChatSDK.DGChatDelegate?",
+                "printedName": "(any DGChatSDK.DGChatDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "DGChatDelegate",
-                    "printedName": "DGChatSDK.DGChatDelegate",
+                    "printedName": "any DGChatSDK.DGChatDelegate",
                     "usr": "s:9DGChatSDK0A8DelegateP"
                   }
                 ],
@@ -110,12 +110,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "DGChatSDK.DGChatDelegate?",
+                    "printedName": "(any DGChatSDK.DGChatDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DGChatDelegate",
-                        "printedName": "DGChatSDK.DGChatDelegate",
+                        "printedName": "any DGChatSDK.DGChatDelegate",
                         "usr": "s:9DGChatSDK0A8DelegateP"
                       }
                     ],
@@ -146,12 +146,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "DGChatSDK.DGChatDelegate?",
+                    "printedName": "(any DGChatSDK.DGChatDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DGChatDelegate",
-                        "printedName": "DGChatSDK.DGChatDelegate",
+                        "printedName": "any DGChatSDK.DGChatDelegate",
                         "usr": "s:9DGChatSDK0A8DelegateP"
                       }
                     ],
@@ -589,7 +589,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -599,7 +599,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<(), Swift.Error>",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -609,7 +609,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -675,7 +675,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -685,7 +685,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<(), Swift.Error>",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -695,7 +695,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -761,7 +761,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -771,7 +771,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<(), Swift.Error>",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -781,7 +781,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -847,7 +847,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -857,7 +857,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<(), Swift.Error>",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -867,7 +867,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -883,7 +883,8 @@
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -906,7 +907,8 @@
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "throwing": true,
@@ -1136,6 +1138,46 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "onCSATPopoverSubmitClicked",
+            "printedName": "onCSATPopoverSubmitClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DGChatSDK.DGChatAction.Type) -> DGChatSDK.DGChatAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DGChatAction",
+                    "printedName": "DGChatSDK.DGChatAction",
+                    "usr": "s:9DGChatSDK0A6ActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DGChatSDK.DGChatAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DGChatAction",
+                        "printedName": "DGChatSDK.DGChatAction",
+                        "usr": "s:9DGChatSDK0A6ActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9DGChatSDK0A6ActionO26onCSATPopoverSubmitClickedyA2CmF",
+            "mangledName": "$s9DGChatSDK0A6ActionO26onCSATPopoverSubmitClickedyA2CmF",
+            "moduleName": "DGChatSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -1355,7 +1397,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -1704,7 +1746,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -1990,7 +2032,7 @@
         "declKind": "Import",
         "moduleName": "DGChatSDK",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -2562,12 +2604,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error) -> ())?",
+                "printedName": "((any Swift.Error) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error) -> ()",
+                    "printedName": "(any Swift.Error) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2577,7 +2619,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ]
@@ -2606,12 +2648,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Error) -> ())?",
+                    "printedName": "((any Swift.Error) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Error) -> ()",
+                        "printedName": "(any Swift.Error) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -2621,7 +2663,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ]
@@ -2650,12 +2692,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Error) -> ())?",
+                    "printedName": "((any Swift.Error) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Error) -> ()",
+                        "printedName": "(any Swift.Error) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -2665,7 +2707,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ]
@@ -2809,12 +2851,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error) -> ())?",
+                "printedName": "((any Swift.Error) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error) -> ()",
+                    "printedName": "(any Swift.Error) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2824,7 +2866,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ]
@@ -3014,7 +3056,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -4173,6 +4215,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
             "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
             "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
@@ -4252,13 +4301,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Comparable",
             "printedName": "Comparable",
             "usr": "s:SL",
@@ -4299,875 +4341,217 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 85,
-      "length": 71,
-      "value": "\"https:\/\/chat-assets.digitalgenius.com\/chatSDKResources\/index-sdk.html\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
       "offset": 380,
       "length": 3,
       "value": "0.8"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 431,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 448,
+      "offset": 497,
       "length": 3,
       "value": "0.7"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 519,
+      "offset": 568,
       "length": 3,
       "value": "3.0"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 627,
-      "length": 925,
-      "value": "\"window.DG_CHAT_WIDGET_CONFIG = {\n    widgetId: '\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 706,
-      "length": 2,
-      "value": "\"',\n    env: '\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 733,
-      "length": 2,
-      "value": "\"',\n    callbacks: {\n        onChatMinimizeClick: () => console.log('callback => onChatMinimizeClick'),\n        onChatLauncherClick: () => console.log('callback => onChatLauncherClick'),\n        onChatEndClick: () => console.log('callback => onChatEndClick'),\n        onChatProactiveButtonClick: () => console.log('callback => onChatProactiveButtonClick'),\n        onCSATPopoverCloseClicked: () => console.log('callback => onCSATPopoverCloseClicked'),\n        iframeDimensions: ({ width, height }) => console.log('callback => onDimensionsChange ' + width + '*' + height),\n        analytics: event => console.log('analytics event sent from flow', event),\n    },\n    metadata: {\n        \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1516,
-      "length": 1,
-      "value": "\"\n    }\n}\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1627,
-      "length": 232,
-      "value": "\"let chatScript = document.createElement(\"script\");\nchatScript.setAttribute(\"src\", \"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1737,
-      "length": 3,
-      "value": "\"\");\nchatScript.setAttribute(\"type\", \"text\/javascript\");\ndocument.body.appendChild(chatScript);\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1962,
-      "length": 301,
-      "value": "\"let crmScript = document.createElement(\"script\");\ncrmScript.setAttribute(\"src\", \"https:\/\/chat-assets.digitalgenius.com\/dgchat.\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2122,
-      "length": 1,
-      "value": "\".\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2136,
-      "length": 1,
-      "value": "\".min.js\");\ncrmScript.setAttribute(\"type\", \"text\/javascript\");\ndocument.body.appendChild(crmScript);\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2321,
-      "length": 122,
-      "value": "\"function captureLog(msg) { window.webkit.messageHandlers.logHandler.postMessage(msg); } window.console.log = captureLog;\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2509,
-      "length": 23,
-      "value": "\"window.dgchat.init();\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2586,
-      "length": 39,
-      "value": "\"window.dgchat.methods.launchWidget();\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2714,
-      "length": 133,
-      "value": "\"window.dgchat.methods.initProactiveButtons({\n    \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2823,
-      "length": 1,
-      "value": "\"\n});\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2932,
-      "length": 50,
-      "value": "\"window.dgchat.methods.sendMessage('\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 2978,
-      "length": 4,
-      "value": "\"');\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 3042,
-      "length": 41,
-      "value": "\"window.dgchat.methods.minimizeWidget();\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3268,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3468,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "FloatLiteral",
-      "offset": 255,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 604,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "FloatLiteral",
-      "offset": 802,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "IntegerLiteral",
-      "offset": 999,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1170,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 1353,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "FloatLiteral",
-      "offset": 2382,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2446,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 2941,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "FloatLiteral",
-      "offset": 3177,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
-      "kind": "FloatLiteral",
-      "offset": 3361,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 4774,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 5273,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 5699,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 6518,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 7039,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 7491,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 846,
-      "length": 4,
-      "value": "\"=>\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 891,
-      "length": 7,
-      "value": "\"Click\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 942,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 953,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 1163,
+      "offset": 1262,
       "length": 7,
       "value": "\"click\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 1193,
+      "offset": 1292,
       "length": 12,
       "value": "\"dimensions\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 1163,
+      "offset": 1262,
       "length": 7,
       "value": "\"click\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 1193,
+      "offset": 1292,
       "length": 12,
       "value": "\"dimensions\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 1346,
-      "length": 4,
-      "value": "\"=>\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
       "kind": "BooleanLiteral",
       "offset": 240,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
       "kind": "StringLiteral",
       "offset": 312,
       "length": 12,
       "value": "\"logHandler\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 782,
+      "offset": 345,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1114,
+      "offset": 642,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 1234,
-      "length": 41,
-      "value": "\"DGChatContentController error: \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 1274,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1723,
+      "offset": 933,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 2776,
-      "length": 4,
-      "value": "\"\n\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3162,
-      "length": 4,
-      "value": "\"\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3195,
-      "length": 10,
-      "value": "\"https:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3302,
-      "length": 13,
-      "value": "\"v\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3314,
-      "length": 9,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3531,
-      "length": 32,
-      "value": "\"\\d{1,2}\\.\\d{1,2}\\.\\d{1,3}\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "Array",
-      "offset": 3746,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 3789,
-      "length": 51,
-      "value": "\"Correct script version should look like:   1.0.1 \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4515,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 4791,
-      "length": 44,
-      "value": "\"DGChatDelegate implementation is required!\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5277,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5576,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6017,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 6358,
-      "length": 25,
-      "value": "\"JS_LOG: \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 6382,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 6913,
-      "length": 42,
-      "value": "\"Unsupported JS callback: \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 6954,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "StringLiteral",
-      "offset": 7390,
-      "length": 3,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
-      "kind": "Array",
-      "offset": 7424,
-      "length": 9,
-      "value": "[\"{\", \"}\"]"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatDelegate.swift",
-      "kind": "Dictionary",
-      "offset": 1695,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 1978,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 324,
+      "offset": 1125,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 621,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 912,
+      "offset": 1166,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1104,
+      "offset": 1242,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1145,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1221,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2470,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2603,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2987,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4340,
+      "offset": 2218,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4376,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4629,
+      "offset": 12797,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4652,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5716,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5798,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6653,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 7076,
-      "length": 19,
-      "value": "\"dg-chat-container\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7153,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7248,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 7323,
-      "length": 25,
-      "value": "\"dg-chat-widget-launcher\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7452,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 7526,
-      "length": 23,
-      "value": "\"dg-chat-widget-iframe\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7651,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7778,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7902,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8040,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9778,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "Dictionary",
-      "offset": 11058,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11295,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12270,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "Array",
-      "offset": 12379,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 12436,
-      "length": 27,
-      "value": "\"ScrollViewScrollIndicator\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12468,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12687,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13519,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "FloatLiteral",
-      "offset": 13553,
-      "length": 3,
-      "value": "8.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "FloatLiteral",
-      "offset": 13634,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
-      "kind": "FloatLiteral",
-      "offset": 13718,
-      "length": 3,
-      "value": "0.1"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
       "kind": "IntegerLiteral",
       "offset": 842,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
-      "kind": "StringLiteral",
-      "offset": 1311,
-      "length": 21,
-      "value": "\"document.readyState\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
-      "kind": "StringLiteral",
-      "offset": 1635,
-      "length": 28,
-      "value": "\"DOM Ready State = \""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
-      "kind": "StringLiteral",
-      "offset": 1662,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2097,
-      "length": 3,
-      "value": "0.2"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
-      "kind": "StringLiteral",
-      "offset": 4026,
-      "length": 36,
-      "value": "\"document.documentElement.outerHTML\""
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
       "kind": "StringLiteral",
       "offset": 1347,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1961,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kassemdmitriy\/Developer\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
+      "filePath": "\/Users\/mel\/Developer\/DigitalGenius\/genius-chat-widget-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
       "kind": "StringLiteral",
       "offset": 2296,
       "length": 11,
