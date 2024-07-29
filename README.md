@@ -29,7 +29,7 @@ For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) document
 
 ## Installation 
 
-### Swift Package Manager
+DGChatSDK is configured to be used exlusively with **Swift Package Manager** (SPM).
 
 To get started, add the DGChatSDK package as a dependency to your project:
 
@@ -38,13 +38,6 @@ To get started, add the DGChatSDK package as a dependency to your project:
 If you're inlcuding this package as a dependecy inside your package, add it to your target using:
 
     .product(name: "DGChatSDK", package: "DGChatSDK"),
-
-### XCFramework
-
-1. Get the iOS framework that contains a latest version of SDK and extract the zip file.
-2. Drag `DGChatSDK.xcframework` into your project.
-3. Make sure "Copy items if needed" is selected and click Finish.
-4. In the target settings for your app, set the `DGChatSDK.xcframework` to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
 
 
 ## Basic usage example.
