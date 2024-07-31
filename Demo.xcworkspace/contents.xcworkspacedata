@@ -5,6 +5,12 @@
       location = "group:Package.swift">
    </FileRef>
    <FileRef
+      location = "group:TROUBLESHOOTING.md">
+   </FileRef>
+   <FileRef
+      location = "group:trouble-resolve.jpg">
+   </FileRef>
+   <FileRef
       location = "group:README.md">
    </FileRef>
    <Group
