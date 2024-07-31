@@ -10,7 +10,7 @@ iOS SDK for DigitalGenius Chat.
 
 ## 🏷 License
 
-`DGChatSDK` is a property of Digital Genius Ltd.
+`DGChatSDK` is a property of DigitalGenius Ltd.
 
 ### Requirements
 
@@ -29,13 +29,13 @@ For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) document
 
 ## Installation 
 
-DGChatSDK is configured to be used exlusively with **Swift Package Manager** (SPM).
+DGChatSDK is configured to be used exclusively with **Swift Package Manager** (SPM).
 
 To get started, add the DGChatSDK package as a dependency to your project:
 
     .package(url: "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git", from: "1.0.0"),
 
-If you're inlcuding this package as a dependecy inside your package, add it to your target using:
+If you're inlcuding this package as a dependency inside your package, add it to your target using:
 
     .product(name: "DGChatSDK", package: "DGChatSDK"),
 
@@ -97,7 +97,7 @@ DGChat.added(to: self) { [weak self] chatView in
 }
 ```
 
-Also, there is a support of presenting chat over UIView using ``DGChat.added(to:animated:completion:)``, example also provided, this gives additional ways of usage, for example - adding widget to PopUp or some custom containers and even over App Window if needed. Same could be also done with UIViewController approach.
+Also, there is a support of presenting chat over UIView using ``DGChat.added(to:animated:completion:)``, example also provided, this gives additional ways of usage, for example - adding widget to a PopUp or a custom container and even over App Window if needed. Same could be also done with UIViewController approach.
 
 > 🧐 Best user experience with DGChatSDK achieved when using maximum possible view size e.g. - full size UIView or Window itself.
 
