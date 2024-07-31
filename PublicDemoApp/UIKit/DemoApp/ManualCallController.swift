@@ -78,4 +78,10 @@ extension ManualCallController {
     @objc private func hideChatView() {
         controlsView.hideWidget()
     }
+    
+    @objc private func minimiseChat() {
+        DGChat.minimizeWidget { _ in
+            
+        }
+    }
 }
