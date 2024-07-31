@@ -1,7 +1,7 @@
 # DGChatSDK
 
 <div align="center">
-   <img width="600px" src="./Sources/DGChatSDK/DGChatSDK.docc/Resources/logo-dark.svg" alt="Logo">
+   <img width="600px" src="./Sources/DGChatWidgetPackage/Resources/logo-dark.svg" alt="Logo">
 </div>
 
 <!--![DigitalGeniusLogo](logo-dark.svg)-->
@@ -10,7 +10,7 @@ iOS SDK for DigitalGenius Chat.
 
 ## 🏷 License
 
-`DGChatSDK` is a property of Digital Genius Ltd.
+`DGChatSDK` is a property of DigitalGenius Ltd.
 
 ### Requirements
 
@@ -29,22 +29,15 @@ For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) document
 
 ## Installation 
 
-### Swift Package Manager
+DGChatSDK is configured to be used exclusively with **Swift Package Manager** (SPM).
 
 To get started, add the DGChatSDK package as a dependency to your project:
 
     .package(url: "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git", from: "1.0.0"),
 
-If you're inlcuding this package as a dependecy inside your package, add it to your target using:
+If you're inlcuding this package as a dependency inside your package, add it to your target using:
 
     .product(name: "DGChatSDK", package: "DGChatSDK"),
-
-### XCFramework
-
-1. Get the iOS framework that contains a latest version of SDK and extract the zip file.
-2. Drag `DGChatSDK.xcframework` into your project.
-3. Make sure "Copy items if needed" is selected and click Finish.
-4. In the target settings for your app, set the `DGChatSDK.xcframework` to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
 
 
 ## Basic usage example.
@@ -104,7 +97,9 @@ DGChat.added(to: self) { [weak self] chatView in
 }
 ```
 
-Also there is support of presenting chat over UIView using ``DGChat.added(to:animated:completion:)``, example also provided , this gives additional ways of usage, for e.g. adding widget to PopUp or some custom containers and even over App Window if needed. Same could be also done with UIViewController approach.
+Also, there is a support of presenting chat over UIView using ``DGChat.added(to:animated:completion:)``, example also provided, this gives additional ways of usage, for example - adding widget to a PopUp or a custom container and even over App Window if needed. Same could be also done with UIViewController approach.
+
+> 🧐 Best user experience with DGChatSDK achieved when using maximum possible view size e.g. - full size UIView or Window itself.
 
 ## Using Widget metadata
 
@@ -174,7 +169,17 @@ Project UI root is UITabBarController which holds few UIViewControllers. Each on
 
 `NavigationCallController.swift` - gives an idea on how to keep DGChat widget running across different ViewControllers pushed to the stack.
 
-> 💭 Please note: All  examples above are listed for educational purpose and do not require developer only to copy-paste code from that examples. The only requrenemnt is to initialize an SDK first and then <u>you're free to manipulate UIView that will be returned in completion closure</u> of ``DGChat.added(to:animated:completion:)`` method or it's overrides.
+💭 Please note, that in each call of:
+
+```swift
+func added(to: UIViewController, animated: Bool, completion: ((UIView) -> Void)?)
+```
+
+is that completion closure produces UIView object which is a reference to an overlay view used by DGChat SDK to represent all needed information. 
+
+> **You can use that reference to show, hide, move, adjust size and perform any other actions available for UIView to adjust DGChat's placement, appearance and etc. according to your needs and your particular project.**
+
+Example on how that UIView can be manipulated can be found in `CustomAnimationController.swift`.  
 
 ### SwiftUI
 

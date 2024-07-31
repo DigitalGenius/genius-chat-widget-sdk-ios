@@ -5,12 +5,11 @@
 ## Build generated
 build/
 DerivedData/
-docs/
 *.doccarchive
 *.zip
 /html_docs
 Package.resolved
-/.swiftpm/
+.swiftpm/
 
 ## Various settings
 *.pbxuser
