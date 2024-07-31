@@ -12,4 +12,4 @@ After adding Package make sure to call 'File -> Packages -> Update to latest pac
 <div align="center">
    <img width="600px" src="./Resources/trouble-resolve.jpg" alt="Logo">
 </div>
-<!--![Logo](trouble-resolve.jpg)-->
+<!--![Screenshot](trouble-resolve.jpg)-->
