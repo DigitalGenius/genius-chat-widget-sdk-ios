@@ -5,8 +5,18 @@
       location = "group:Package.swift">
    </FileRef>
    <FileRef
+      location = "group:TROUBLESHOOTING.md">
+   </FileRef>
+   <FileRef
       location = "group:README.md">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Resources">
+      <FileRef
+         location = "group:/Users/kassemdmitriy/Developer/genius-chat-widget-sdk-ios/trouble-resolve.jpg">
+      </FileRef>
+   </Group>
    <Group
       location = "group:Sources"
       name = "Sources">
