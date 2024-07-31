@@ -39,6 +39,7 @@ If you're inlcuding this package as a dependency inside your package, add it to 
 
     .product(name: "DGChatSDK", package: "DGChatSDK"),
 
+If you experiencing any troubles with SPM installation or updates, please try following [manual](TROUBLESHOOTING.md) before submitting a new bug.
 
 ## Basic usage example.
 
@@ -263,7 +264,3 @@ let onCSATPopoverCloseClicked = eventEmitter.addListener(
 ```
 
 For more detailed example, please refer to `App.tsx`.
-
-## Troubleshooting
-
-If you experiencing any troubles with SPM, please try following [manual](TROUBLESHOOTING.md) before submitting a new bug.

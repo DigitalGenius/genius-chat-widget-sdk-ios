@@ -1,6 +1,6 @@
-#  SPM TROUBLESHOOTING
+#  Most common issue when using SPM
 
-### Note
+
 
 When adding package use 'Up to next Major version' and version number from documentation.
 
