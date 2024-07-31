@@ -8,14 +8,14 @@
       location = "group:TROUBLESHOOTING.md">
    </FileRef>
    <FileRef
-      location = "group:trouble-resolve.jpg">
-   </FileRef>
-   <FileRef
       location = "group:README.md">
    </FileRef>
    <Group
       location = "group:Sources"
       name = "Sources">
+      <FileRef
+         location = "group:/Users/kassemdmitriy/Developer/genius-chat-widget-sdk-ios/Sources/trouble-resolve.jpg">
+      </FileRef>
       <Group
          location = "group:DGChatWidgetPackage"
          name = "DGChatWidgetPackage">
