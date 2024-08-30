@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		266C83CD2C8210FE009FDB5A /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 266C83CC2C8210FE009FDB5A /* DGChatWidgetPackage */; };
+		266C83D32C8218E2009FDB5A /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 266C83D22C8218E2009FDB5A /* DGChatWidgetPackage */; };
 		A0F9704A2A48BF0A00CB21ED /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F970492A48BF0A00CB21ED /* SwiftUIDemoApp.swift */; };
 		A0F9704C2A48BF0A00CB21ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9704B2A48BF0A00CB21ED /* ContentView.swift */; };
 		A0F9704E2A48BF0B00CB21ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F9704D2A48BF0B00CB21ED /* Assets.xcassets */; };
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266C83CD2C8210FE009FDB5A /* DGChatWidgetPackage in Frameworks */,
+				266C83D32C8218E2009FDB5A /* DGChatWidgetPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = SwiftUIDemo;
 			packageProductDependencies = (
-				266C83CC2C8210FE009FDB5A /* DGChatWidgetPackage */,
+				266C83D22C8218E2009FDB5A /* DGChatWidgetPackage */,
 			);
 			productName = SwiftUIDemo;
 			productReference = A0F970462A48BF0A00CB21ED /* SwiftUIDemo.app */;
@@ -125,7 +125,7 @@
 			);
 			mainGroup = A0F9703D2A48BF0A00CB21ED;
 			packageReferences = (
-				266C83CB2C8210FE009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
+				266C83D12C8218E2009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
 			);
 			productRefGroup = A0F970472A48BF0A00CB21ED /* Products */;
 			projectDirPath = "";
@@ -357,9 +357,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		266C83CB2C8210FE009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
+		266C83D12C8218E2009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maiquannguyen/genius-chat-widget-sdk-ios.git";
+			repositoryURL = "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -368,9 +368,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		266C83CC2C8210FE009FDB5A /* DGChatWidgetPackage */ = {
+		266C83D22C8218E2009FDB5A /* DGChatWidgetPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 266C83CB2C8210FE009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
+			package = 266C83D12C8218E2009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
 			productName = DGChatWidgetPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
