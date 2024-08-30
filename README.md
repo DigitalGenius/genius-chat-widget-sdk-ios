@@ -156,6 +156,28 @@ func minimizeWidget() async throws
 
 See [full methods list](https://docs.digitalgenius.com/docs/methods) for more details.
 
+## Full screen support
+By default, when the Chat View is added using the standard `DGChat.added(to: self)`  method, it remains within the view boundaries and does not extend over the status bar (which contains the user’s battery level, clock etc. and dynamic island)<br/>
+
+![Screenshot](FullScreen1.png)
+
+### To display your chat view without the status bar, follow these steps:
+
+1. Hide the status bar in the controller containing the chat view by overriding the following property:
+   ```Swift
+   override var prefersStatusBarHidden: Bool {
+      return true
+   }
+   ```
+2. Add a UIView matching the color of the DGChat navigation bar in the status bar frame
+   
+   ![Screenshot](FullScreen3.png)
+   
+3. The final result will look like this:
+   
+   ![Screenshot](FullScreen2.png)
+
+
 ## Sample project
 
 The interaction model and example usage can be found in Demo project. Please note that all DGChatDelegate methods are implemented in one isolated instance for ease of use, but it's **not** a requirement.
