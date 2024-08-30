@@ -34,15 +34,15 @@ extension SDKDelegateObject {
     }
     
     var widgetId: String {
-        fatalError("Place your widgetId here")
+        return "c8f53916-ad17-4be8-8f58-383ea76bc5f8"
     }
     
     var env: String {
-        fatalError("Place your environment here")
+        return "dev.us"
     }
     
     var scriptVersion: String {
-        fatalError("Place a version of SDK here")
+        return "2.3.0"
     }
     
     // Used for CRM integration, optional, line could be removed if not used
