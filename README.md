@@ -70,6 +70,8 @@ The most important and required delegate properties are:
 
 `DGChatDelegate.scriptVersion` - a version of the script, used by your organization.
 
+`DGChatDelegate.configs` - List of customizable configs for SDK.
+
 All of these information is provided by a DigitalGenius Customer Success Manager. 
 
 Plase see an example implementation below:
@@ -85,6 +87,10 @@ var env: String {
 
 var scriptVersion: String {
     "1.1.0"
+}
+
+var configs: [String : Any]? {
+    ["generalSettings": ["isChatLauncherEnabled": false]]
 }
 ```
 
