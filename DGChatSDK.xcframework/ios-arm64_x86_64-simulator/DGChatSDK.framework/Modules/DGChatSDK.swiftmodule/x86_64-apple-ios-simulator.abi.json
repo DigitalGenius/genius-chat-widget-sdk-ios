@@ -1656,6 +1656,93 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "configs",
+            "printedName": "configs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9DGChatSDK0A8DelegateP7configsSDySSypGSgvp",
+            "mangledName": "$s9DGChatSDK0A8DelegateP7configsSDySSypGSgvp",
+            "moduleName": "DGChatSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9DGChatSDK0A8DelegateP7configsSDySSypGSgvg",
+                "mangledName": "$s9DGChatSDK0A8DelegateP7configsSDySSypGSgvg",
+                "moduleName": "DGChatSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : DGChatSDK.DGChatDelegate>",
+                "sugared_genericSig": "<Self where Self : DGChatSDK.DGChatDelegate>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "didAttemptToOpen",
             "printedName": "didAttemptToOpen(url:)",
@@ -2746,7 +2833,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(widgetId:env:scriptVersion:crmCredenrials:metadata:onURLTap:onChatAction:onFailure:)",
+            "printedName": "init(widgetId:env:scriptVersion:configs:crmCredenrials:metadata:onURLTap:onChatAction:onFailure:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2771,6 +2858,34 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -2877,8 +2992,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion14crmCredenrials8metadata8onURLTap0nD6Action0N7FailureACSS_S2SAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aP0OcSgys5Error_pcSgtcfc",
-            "mangledName": "$s9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion14crmCredenrials8metadata8onURLTap0nD6Action0N7FailureACSS_S2SAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aP0OcSgys5Error_pcSgtcfc",
+            "usr": "s:9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion7configs14crmCredenrials8metadata8onURLTap0oD6Action0O7FailureACSS_S2SSDySSypGSgAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aQ0OcSgys5Error_pcSgtcfc",
+            "mangledName": "$s9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion7configs14crmCredenrials8metadata8onURLTap0oD6Action0O7FailureACSS_S2SSDySSypGSgAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aQ0OcSgys5Error_pcSgtcfc",
             "moduleName": "DGChatSDK",
             "declAttributes": [
               "AccessControl"
@@ -3298,6 +3413,92 @@
                     "declKind": "Accessor",
                     "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvg",
                     "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvg",
+                    "moduleName": "DGChatSDK",
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "configs",
+                "printedName": "configs",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC7configsSDySSypGSgvp",
+                "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC7configsSDySSypGSgvp",
+                "moduleName": "DGChatSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC7configsSDySSypGSgvg",
+                    "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC7configsSDySSypGSgvg",
                     "moduleName": "DGChatSDK",
                     "declAttributes": [
                       "Final"
@@ -4341,254 +4542,254 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
       "offset": 380,
       "length": 3,
       "value": "0.8"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 431,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
       "offset": 497,
       "length": 3,
       "value": "0.7"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/Constants.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
       "offset": 650,
       "length": 4,
       "value": "10.0"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 604,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
       "offset": 1353,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 2953,
+      "offset": 2944,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 4786,
+      "offset": 4777,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5285,
+      "offset": 5276,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5711,
+      "offset": 5702,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 6530,
+      "offset": 6521,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7051,
+      "offset": 7042,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChat.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7503,
+      "offset": 7494,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
       "offset": 1262,
       "length": 7,
       "value": "\"click\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
       "offset": 1292,
       "length": 12,
       "value": "\"dimensions\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
       "offset": 1262,
       "length": 7,
       "value": "\"click\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatAction.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
       "offset": 1292,
       "length": 12,
       "value": "\"dimensions\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatContentController.swift",
       "kind": "BooleanLiteral",
       "offset": 240,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatContentController.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatContentController.swift",
       "kind": "StringLiteral",
       "offset": 312,
       "length": 12,
       "value": "\"logHandler\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 345,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 642,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 933,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 1125,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 1166,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 1242,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "Array",
       "offset": 1493,
       "length": 71,
       "value": "[\"mp4\", \"mov\", \"m4v\", \"mp3\", \"wav\", \"m4a\", \"avi\", \"flv\", \"wmv\", \"mpeg\"]"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "Array",
       "offset": 1612,
       "length": 59,
       "value": "[\"jpg\", \"jpeg\", \"png\", \"gif\", \"bmp\", \"tiff\", \"tif\", \"heic\"]"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "FloatLiteral",
       "offset": 2242,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "FloatLiteral",
       "offset": 2248,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
       "offset": 2322,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 2362,
-      "length": 5,
-      "value": "false"
+      "length": 4,
+      "value": "true"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 16383,
+      "offset": 16382,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/DGWebView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGWebView.swift",
       "kind": "IntegerLiteral",
       "offset": 842,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/GeniusChatView.swift",
       "kind": "StringLiteral",
-      "offset": 1347,
+      "offset": 1482,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/dg-chat-ios-sdk\/Sources\/DGChatSDK\/GeniusChatView.swift",
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/GeniusChatView.swift",
       "kind": "StringLiteral",
-      "offset": 2271,
+      "offset": 2437,
       "length": 11,
       "value": "\"DGChatSDK.Coordinator\""
     }

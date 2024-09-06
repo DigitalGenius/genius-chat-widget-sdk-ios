@@ -145,6 +145,7 @@ public protocol DGChatDelegate : AnyObject {
   var scriptVersion: Swift.String { get }
   var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
   var metadata: Swift.String { get }
+  var configs: [Swift.String : Any]? { get }
 }
 public struct DGChatCRMCredentials {
   public let platform: Swift.String
@@ -192,7 +193,7 @@ public struct GeniusChatView : SwiftUI.UIViewRepresentable {
   public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
   public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
   public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
-  public init(widgetId: Swift.String, env: Swift.String, scriptVersion: Swift.String, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, metadata: Swift.String = "", onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
+  public init(widgetId: Swift.String, env: Swift.String, scriptVersion: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, metadata: Swift.String = "", onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
   @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
   @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
@@ -213,6 +214,9 @@ public struct GeniusChatView : SwiftUI.UIViewRepresentable {
       get
     }
     final public var metadata: Swift.String {
+      get
+    }
+    final public var configs: [Swift.String : Any]? {
       get
     }
     @objc deinit
