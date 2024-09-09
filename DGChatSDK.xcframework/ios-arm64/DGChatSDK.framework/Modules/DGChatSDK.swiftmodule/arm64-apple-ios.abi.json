@@ -1506,51 +1506,6 @@
           },
           {
             "kind": "Var",
-            "name": "scriptVersion",
-            "printedName": "scriptVersion",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK0A8DelegateP13scriptVersionSSvp",
-            "mangledName": "$s9DGChatSDK0A8DelegateP13scriptVersionSSvp",
-            "moduleName": "DGChatSDK",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK0A8DelegateP13scriptVersionSSvg",
-                "mangledName": "$s9DGChatSDK0A8DelegateP13scriptVersionSSvg",
-                "moduleName": "DGChatSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : DGChatSDK.DGChatDelegate>",
-                "sugared_genericSig": "<Self where Self : DGChatSDK.DGChatDelegate>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "crmCredentials",
             "printedName": "crmCredentials",
             "children": [
@@ -3275,50 +3230,6 @@
               },
               {
                 "kind": "Var",
-                "name": "scriptVersion",
-                "printedName": "scriptVersion",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC13scriptVersionSSvp",
-                "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC13scriptVersionSSvp",
-                "moduleName": "DGChatSDK",
-                "declAttributes": [
-                  "Final",
-                  "AccessControl"
-                ],
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC13scriptVersionSSvg",
-                    "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC13scriptVersionSSvg",
-                    "moduleName": "DGChatSDK",
-                    "declAttributes": [
-                      "Final"
-                    ],
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
                 "name": "crmCredentials",
                 "printedName": "crmCredentials",
                 "children": [
@@ -4544,35 +4455,35 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 245,
+      "offset": 341,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 380,
+      "offset": 476,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 431,
+      "offset": 527,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 497,
+      "offset": 593,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 650,
+      "offset": 746,
       "length": 4,
       "value": "10.0"
     },
