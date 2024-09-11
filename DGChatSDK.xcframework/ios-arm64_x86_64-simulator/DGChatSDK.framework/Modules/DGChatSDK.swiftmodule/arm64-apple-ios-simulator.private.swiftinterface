@@ -122,6 +122,8 @@ public enum DGChatAction : Swift.String {
   case onChatProactiveButtonClick
   case onCSATPopoverCloseClicked
   case onCSATPopoverSubmitClicked
+  case onWidgetEmbedded
+  case onChatInitialised
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
