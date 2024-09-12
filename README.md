@@ -85,10 +85,6 @@ var env: String {
     "eu"
 }
 
-var scriptVersion: String {
-    "1.1.0"
-}
-
 var configs: [String : Any]? {
     ["generalSettings": ["isChatLauncherEnabled": false]]
 }
@@ -250,7 +246,6 @@ Initial setup will look like:
 DGChatModule.showDGChatView(
   'Place your widgetId here',
   'Place your flowURL here',
-  'Place a version of SDK here',
   'Place your widget environment here',
 );
 ```
