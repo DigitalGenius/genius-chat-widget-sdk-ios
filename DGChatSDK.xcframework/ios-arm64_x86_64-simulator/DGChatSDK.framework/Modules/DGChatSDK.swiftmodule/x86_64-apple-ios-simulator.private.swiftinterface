@@ -122,6 +122,8 @@ public enum DGChatAction : Swift.String {
   case onChatProactiveButtonClick
   case onCSATPopoverCloseClicked
   case onCSATPopoverSubmitClicked
+  case onWidgetEmbedded
+  case onChatInitialised
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -142,7 +144,6 @@ public protocol DGChatDelegate : AnyObject {
   func didFailWith(error: any Swift.Error)
   var widgetId: Swift.String { get }
   var env: Swift.String { get }
-  var scriptVersion: Swift.String { get }
   var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
   var metadata: Swift.String { get }
   var configs: [Swift.String : Any]? { get }
@@ -205,9 +206,6 @@ public struct GeniusChatView : SwiftUI.UIViewRepresentable {
       get
     }
     final public var env: Swift.String {
-      get
-    }
-    final public var scriptVersion: Swift.String {
       get
     }
     final public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {

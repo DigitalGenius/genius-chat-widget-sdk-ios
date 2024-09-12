@@ -10,7 +10,7 @@
 		18BFFEFD2C2B01A000D8E596 /* NavigationCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFEFC2C2B01A000D8E596 /* NavigationCallController.swift */; };
 		18BFFEFF2C2B01C900D8E596 /* WindowCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFEFE2C2B01C900D8E596 /* WindowCallController.swift */; };
 		18BFFF012C2B025900D8E596 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFFF002C2B025900D8E596 /* TabBarController.swift */; };
-		266C83D02C82111B009FDB5A /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 266C83CF2C82111B009FDB5A /* DGChatWidgetPackage */; };
+		26B680032C8EAE29003EEB9E /* DGChatWidgetPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 26B680022C8EAE29003EEB9E /* DGChatWidgetPackage */; };
 		A02EBA0C2BAC2E570006EE20 /* StraightForwardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA072BAC2E570006EE20 /* StraightForwardController.swift */; };
 		A02EBA0D2BAC2E570006EE20 /* SDKDelegateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA082BAC2E570006EE20 /* SDKDelegateObject.swift */; };
 		A02EBA0E2BAC2E570006EE20 /* ManualCallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EBA092BAC2E570006EE20 /* ManualCallController.swift */; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266C83D02C82111B009FDB5A /* DGChatWidgetPackage in Frameworks */,
+				26B680032C8EAE29003EEB9E /* DGChatWidgetPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +129,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				266C83CF2C82111B009FDB5A /* DGChatWidgetPackage */,
+				26B680022C8EAE29003EEB9E /* DGChatWidgetPackage */,
 			);
 			productName = DemoApp;
 			productReference = A0B17208299B8ECA0091465B /* DemoApp.app */;
@@ -160,7 +160,7 @@
 			);
 			mainGroup = A0B171FF299B8ECA0091465B;
 			packageReferences = (
-				266C83CE2C82111B009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
+				26B680012C8EAE29003EEB9E /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */,
 			);
 			productRefGroup = A0B17209299B8ECA0091465B /* Products */;
 			projectDirPath = "";
@@ -418,20 +418,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		266C83CE2C82111B009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
+		26B680012C8EAE29003EEB9E /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maiquannguyen/genius-chat-widget-sdk-ios.git";
+			repositoryURL = "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		266C83CF2C82111B009FDB5A /* DGChatWidgetPackage */ = {
+		26B680022C8EAE29003EEB9E /* DGChatWidgetPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 266C83CE2C82111B009FDB5A /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
+			package = 26B680012C8EAE29003EEB9E /* XCRemoteSwiftPackageReference "genius-chat-widget-sdk-ios" */;
 			productName = DGChatWidgetPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
