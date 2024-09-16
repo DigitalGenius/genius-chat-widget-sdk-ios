@@ -104,6 +104,43 @@ Also, there is a support of presenting chat over UIView using ``DGChat.added(to:
 
 > 🧐 Best user experience with DGChatSDK achieved when using maximum possible view size e.g. - full size UIView or Window itself.
 
+## Launch chat from an external element
+
+To trigger the chat widget to launch from some external element in your application (i.e. An “Chat with us“ button), call ``expandWidget(_ completion:)`` function.
+```swift
+    func expandWidget() {
+        DGChat.expandWidget { result in
+            switch result {
+            case .success(let success):
+                debugPrint(success)
+            case .failure(let failure):
+                debugPrint(failure)
+                debugPrint("Widget should be initialized to call launch method")
+            }
+        }
+    }
+``` 
+Or ``launchWidget()`` functions if inside an async function.
+```swift
+    func expandWidget() async {
+        // Simulate a network request with a delay of 2 seconds
+        let result try? await DGChat.launchWidget()
+        debugPrint("success launched widget")
+    }
+```
+Remember to setup `DGChatDelegate` and check for `DGChatAction.onWidgetEmbedded` return in side function ``didTrack(action: DGChatAction)``
+```
+    func didTrack(action: DGChatSDK.DGChatAction) {
+        switch action {
+        case .onWidgetEmbedded:
+            debugPrint("After this return, you can call launch or expand widget")
+        default:
+            break
+        }
+        print("Action track:", action)
+    }
+```
+ 
 ## Using Widget metadata
 
 You can specify a `metadata`, provided by vendor for your particular business needs.
