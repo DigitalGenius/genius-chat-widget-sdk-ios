@@ -1,4 +1,4 @@
-# DGChatSDK
+# ``DGChatSDK``
 
 <div align="center">
    <img width="600px" src="./Sources/DGChatWidgetPackage/Resources/logo-dark.svg" alt="Logo">
@@ -16,12 +16,13 @@ iOS SDK for DigitalGenius Chat.
 
 - Xcode 14.2+
 
-
 ## Overview
 
-This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
+This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. 
+The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
 
-A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
+A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` before getting started. 
+Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
 
 Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. **Originally developed using UIKit** with SiwftUI wrapper for flexibility on user end. 
 
@@ -79,7 +80,7 @@ The list of actions
     case onCSATPopoverCloseClicked
     /// Called when user submits a feedback session-end PopUp.
     case onCSATPopoverSubmitClicked
-    /// Called when widget success embeded, customer will be able to call launch Widget
+    /// Called when widget success embeded, customer will be able to call launchWidget method
     case onWidgetEmbedded
     /// Called when widget finally launched
     case onChatInitialised
@@ -91,9 +92,7 @@ The list of actions
 
 `DGChatDelegate.configs` - List of customizable configs for SDK.
 
-All of these information is provided by a DigitalGenius Customer Success Manager. 
-
-Plase see an example implementation below:
+Plase see an example implementation below for the DGChatDelegate methods:
 
 ```swift
 var widgetId: String {
@@ -136,6 +135,16 @@ var metadata: String {
 ```
 
 Please note: You should stick to the formatting, provided by Vendor, otherwise `metadata` will be considered as invalid without explicit errors thrown.
+
+## Additional custom configs
+You can use config to customise your chat widget style. Eg: floating button position, proactive buttons
+
+```Swift
+var configs: [String : Any]? {
+    ["generalSettings": ["isChatLauncherEnabled": false]]
+}
+
+```
 
 ## Additional Methods
 
@@ -311,7 +320,7 @@ is that completion closure produces UIView object which is a reference to an ove
 
 Example on how that UIView can be manipulated can be found in `CustomAnimationController.swift`.  
 
-### SwiftUI
+# SwiftUI
 
 If you are using SwiftUI for your project, please use `GeniusChatView` as listed on the example below:
 
@@ -330,7 +339,7 @@ var body: some View {
 
 `GeniusChatView` supports all the same methods of DGChatSDK.
 
-### ReactNative
+# ReactNative
 
 To use Genius SDK in ReactNative projects, please follow these steps:
 
