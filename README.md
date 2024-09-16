@@ -64,6 +64,27 @@ To make everything work as expected, you'll need to implement a ``DGChatDelegate
 
 The most important and required delegate properties are:
 
+`DGChatDelegate.didTrack(action: DGChatAction)` - Provides user actions callbacks, in-chat URL opening attempt to process it inside the app, and requests configuration for SDK client which will be passed to DigitalGenius servers. 
+The list of actions
+```swift 
+    /// Called when user minimizes chat view into launcher.
+    case onChatMinimizeClick
+    /// Called when launcher icons tapped.
+    case onChatLauncherClick
+    /// Called when user presses a cross button in chat view.
+    case onChatEndClick
+    /// Called when user presses proactive button in chat view.
+    case onChatProactiveButtonClick
+    /// Called when user closes a chat's client feedback PopUp.
+    case onCSATPopoverCloseClicked
+    /// Called when user submits a feedback session-end PopUp.
+    case onCSATPopoverSubmitClicked
+    /// Called when widget success embeded, customer will be able to call launch Widget
+    case onWidgetEmbedded
+    /// Called when widget finally launched
+    case onChatInitialised
+```
+
 `DGChatDelegate.widgetId` - which tells SDK your unique client identifier.
 
 `DGChatDelegate.env` - environment version for your particular case.
@@ -106,41 +127,97 @@ Also, there is a support of presenting chat over UIView using ``DGChat.added(to:
 
 ## Launch chat from an external element
 
-To trigger the chat widget to launch from some external element in your application (i.e. An “Chat with us“ button), call ``expandWidget(_ completion:)`` function.
+If you want to launch chat widget instead of default SDK launch button.
+1. Hide the launcher button with this config:
+```
+"generalSettings": ["isChatLauncherEnabled": false]
+```
+Inside ``DGChatDelegate.configs``
+For example:
+```swift 
+    var configs: [String : Any]? {
+        // Sample config
+        ["generalSettings": ["isChatLauncherEnabled": false]]
+    }
+```
+
+2. Init chat SDK by calling ``DGChat.added(to:)`` function. And also set delegate for SDK by calling `DGChat.delegate`. 
+Listen to action `DGChatAction.onWidgetEmbedded` return inside method `DGChatDelegate.didTrack(action:)`. 
+
+3. After SDK success embeded to application, you can launch chat widget manually by calling ``expandWidget(_ completion:)`` function. 
+Or ``launchWidget()`` functions if inside an async function.
+
+Here the full example of how to config SDK to launch manually inside an UIViewController
 ```swift
-    func expandWidget() {
+class ChatViewController: UIViewController, DGChatDelegate {
+    
+    // Lazy var UIButton with title 'Chat with us'
+    lazy var chatButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Chat with us", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        // Add action to button for touchUpInside event
+        button.addTarget(self, action: #selector(chatButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up Chat
+        DGChat.delegate = self
+        DGChat.added(to: self) { chatView in
+            print("DGChatView is presented now with frame \(chatView.frame)")
+        }
+
+        // Add the button to the view hierarchy
+        view.addSubview(chatButton)
+        chatButton.isHidden = true
+        // Set up button constraints (bottom and trailing)
+        NSLayoutConstraint.activate([
+            chatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            chatButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            chatButton.widthAnchor.constraint(equalToConstant: 150),
+            chatButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    // Action function for the button
+    @objc func chatButtonTapped() {
         DGChat.expandWidget { result in
-            switch result {
-            case .success(let success):
-                debugPrint(success)
-            case .failure(let failure):
-                debugPrint(failure)
-                debugPrint("Widget should be initialized to call launch method")
-            }
+            // handle result
         }
     }
-``` 
-Or ``launchWidget()`` functions if inside an async function.
-```swift
-    func expandWidget() async {
-        // Simulate a network request with a delay of 2 seconds
-        let result try? await DGChat.launchWidget()
-        debugPrint("success launched widget")
-    }
-```
-Remember to setup `DGChatDelegate` and check for `DGChatAction.onWidgetEmbedded` return in side function ``didTrack(action: DGChatAction)``
-```
+    
+
+    // MARK: - DGChatDelegate
     func didTrack(action: DGChatSDK.DGChatAction) {
         switch action {
         case .onWidgetEmbedded:
-            debugPrint("After this return, you can call launch or expand widget")
+            chatButton.isHidden = false
         default:
             break
         }
         print("Action track:", action)
     }
+    
+    func didFailWith(error: Error) {
+        // SDK got error
+    }
+    
+    var widgetId: String {
+        // Client identifier (Widget Identifier) provided by vendor company.
+    }
+    
+    var env: String {
+        // Environment value provided by vendor company.
+    }
+    
+    var configs: [String : Any]? {
+        ["generalSettings": ["isChatLauncherEnabled": false]]
+    }
+}
 ```
- 
+
 ## Using Widget metadata
 
 You can specify a `metadata`, provided by vendor for your particular business needs.
