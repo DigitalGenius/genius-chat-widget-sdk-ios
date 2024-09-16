@@ -121,91 +121,6 @@ Also, there is a support of presenting chat over UIView using ``DGChat.added(to:
 
 > 🧐 Best user experience with DGChatSDK achieved when using maximum possible view size e.g. - full size UIView or Window itself.
 
-## Launch chat from an external element
-
-If you want to launch chat widget instead of default SDK launch button.
-1. Hide the launcher button with this config inside ``DGChatDelegate.configs``
-```
-"generalSettings": ["isChatLauncherEnabled": false]
-```
-
-2. Init chat SDK by calling ``DGChat.added(to:)`` function. And also set delegate for SDK by calling `DGChat.delegate`. 
-Listen to action `DGChatAction.onWidgetEmbedded` return inside method `DGChatDelegate.didTrack(action:)`. 
-
-3. After SDK success embeded to application, you can launch chat widget manually by calling ``expandWidget(_ completion:)`` function. 
-Or ``launchWidget()`` functions if inside an async function.
-
-Here the full example of how to config SDK to launch manually inside an UIViewController
-```swift
-class ChatViewController: UIViewController, DGChatDelegate {
-    
-    // Lazy var UIButton with title 'Chat with us'
-    lazy var chatButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Chat with us", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        // Add action to button for touchUpInside event
-        button.addTarget(self, action: #selector(chatButtonTapped), for: .touchUpInside)
-        return button
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Set up Chat
-        DGChat.delegate = self
-        DGChat.added(to: self) { chatView in
-            print("DGChatView is presented now with frame \(chatView.frame)")
-        }
-
-        // Add the button to the view hierarchy
-        view.addSubview(chatButton)
-        chatButton.isHidden = true
-        // Set up button constraints (bottom and trailing)
-        NSLayoutConstraint.activate([
-            chatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            chatButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            chatButton.widthAnchor.constraint(equalToConstant: 150),
-            chatButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
-    // Action function for the button
-    @objc func chatButtonTapped() {
-        DGChat.expandWidget { result in
-            // handle result
-        }
-    }
-    
-
-    // MARK: - DGChatDelegate
-    func didTrack(action: DGChatSDK.DGChatAction) {
-        switch action {
-        case .onWidgetEmbedded:
-            chatButton.isHidden = false
-        default:
-            break
-        }
-        print("Action track:", action)
-    }
-    
-    func didFailWith(error: Error) {
-        // SDK got error
-    }
-    
-    var widgetId: String {
-        // Client identifier (Widget Identifier) provided by vendor company.
-    }
-    
-    var env: String {
-        // Environment value provided by vendor company.
-    }
-    
-    var configs: [String : Any]? {
-        ["generalSettings": ["isChatLauncherEnabled": false]]
-    }
-}
-```
-
 ## Using Widget metadata
 
 You can specify a `metadata`, provided by vendor for your particular business needs.
@@ -259,6 +174,94 @@ func minimizeWidget() async throws
 ```
 
 See [full methods list](https://docs.digitalgenius.com/docs/methods) for more details.
+
+## Launching Chat from your own UI Component
+
+If you prefer to launch the chat widget from your UI element (eg: UIButton) rather than using the default SDK launcher, follow these steps:
+1. Hide the launcher with this custome config from chat delegate
+You can hide the default launcher button by adding the following configuration inside  ``DGChatDelegate.configs``
+```
+var configs: [String : Any]? {
+     ["generalSettings": ["isChatLauncherEnabled": false]]
+ }
+```
+
+2. Initialize the Chat SDK
+Initialize the chat SDK by calling the DGChat.added(to:) function. Then, set the delegate for the SDK by calling DGChat.delegate. To listen for the DGChatAction.onWidgetEmbedded event, implement the DGChatDelegate.didTrack(action:) method. 
+
+4. Manually Launch the Chat Widget
+After the SDK is successfully embedded in your application, you can manually launch the chat widget by calling the ``expandWidget(_ completion:)`` function attach to your
+
+Below is a complete example of how to configure the SDK to manually launch the chat widget
+```swift
+class ChatViewController: UIViewController, DGChatDelegate {
+    
+    // Lazy var UIButton with title 'Chat with us'
+    lazy var chatButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Chat with us", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        // Add action to button for touchUpInside event
+        button.addTarget(self, action: #selector(chatButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up Chat
+        DGChat.delegate = self
+        DGChat.added(to: self) { chatView in
+            print("DGChatView is presented now with frame \(chatView.frame)")
+        }
+
+        // Add the button to the view hierarchy
+        view.addSubview(chatButton)
+        chatButton.isEnabled = false
+        // Set up button constraints (bottom and trailing)
+        NSLayoutConstraint.activate([
+            chatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            chatButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            chatButton.widthAnchor.constraint(equalToConstant: 150),
+            chatButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    // Action function for the button
+    @objc func chatButtonTapped() {
+        DGChat.expandWidget { result in
+            // handle result
+        }
+    }
+    
+
+    // MARK: - DGChatDelegate
+    func didTrack(action: DGChatSDK.DGChatAction) {
+        switch action {
+        case .onWidgetEmbedded:
+            chatButton.isEnabled = true
+        default:
+            break
+        }
+        print("Action track:", action)
+    }
+    
+    func didFailWith(error: Error) {
+        // SDK got error
+    }
+    
+    var widgetId: String {
+        // Client identifier (Widget Identifier) provided by vendor company.
+    }
+    
+    var env: String {
+        // Environment value provided by vendor company.
+    }
+    
+    var configs: [String : Any]? {
+        ["generalSettings": ["isChatLauncherEnabled": false]]
+    }
+}
+```
 
 ## Full screen support
 By default, when the Chat View is added using the standard `DGChat.added(to: self)`  method, it remains within the view boundaries and does not extend over the status bar (which contains the user’s battery level, clock etc. and dynamic island)<br/>
