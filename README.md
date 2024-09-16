@@ -128,17 +128,9 @@ Also, there is a support of presenting chat over UIView using ``DGChat.added(to:
 ## Launch chat from an external element
 
 If you want to launch chat widget instead of default SDK launch button.
-1. Hide the launcher button with this config:
+1. Hide the launcher button with this config inside ``DGChatDelegate.configs``
 ```
 "generalSettings": ["isChatLauncherEnabled": false]
-```
-Inside ``DGChatDelegate.configs``
-For example:
-```swift 
-    var configs: [String : Any]? {
-        // Sample config
-        ["generalSettings": ["isChatLauncherEnabled": false]]
-    }
 ```
 
 2. Init chat SDK by calling ``DGChat.added(to:)`` function. And also set delegate for SDK by calling `DGChat.delegate`. 
