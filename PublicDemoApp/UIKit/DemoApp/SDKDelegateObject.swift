@@ -41,10 +41,6 @@ extension SDKDelegateObject {
         fatalError("Place your environment here")
     }
     
-    var scriptVersion: String {
-        fatalError("Place a version of SDK here")
-    }
-    
     // Used for CRM integration, optional, line could be removed if not used
     var crmCredentials: DGChatCRMCredentials? {
         // .init(platform: "your CRM platform here", version: "your CRM Version here")
@@ -63,5 +59,13 @@ extension SDKDelegateObject {
         """
         */
         ""
+    }
+    
+    var configs: [String : Any]? {
+        /*
+        here is an example on how configs should look like
+        ["generalSettings": ["isChatLauncherEnabled": true]]
+        */
+        nil
     }
 }
