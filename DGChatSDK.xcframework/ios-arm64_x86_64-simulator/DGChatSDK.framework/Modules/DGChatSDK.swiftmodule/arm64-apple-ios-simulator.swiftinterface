@@ -169,6 +169,7 @@ extension DGChatSDK.DGChatDelegate {
 }
 extension DGChatSDK.DGChat {
   public static func sendMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  public static func sendSystemMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
   public static func sendMessage(_ message: Swift.String) async throws
   #endif
