@@ -132,6 +132,14 @@ func sendMessage(_ message: String, completion: @escaping (Result<Void, Error>) 
 func sendMessage(_ message: String) async throws
 ```
 
+The `sendSystemMessage` method allows the customer to programmatically send a message to system. This method is only available after the chat has been embeded:
+
+```swift
+func sendSystemMessage(_ message: String, completion: @escaping (Result<Void, Error>) -> Void)
+
+func sendSystemMessage(_ message: String) async throws
+```
+
 The `launchWidget` method allows the customer to programmatically launch the widget:
 
 ```swift
