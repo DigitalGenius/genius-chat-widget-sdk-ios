@@ -4758,35 +4758,35 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 341,
+      "offset": 234,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 476,
+      "offset": 369,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 527,
+      "offset": 420,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 593,
+      "offset": 486,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 746,
+      "offset": 639,
       "length": 4,
       "value": "10.0"
     },
