@@ -137,7 +137,6 @@ public protocol DGChatDelegate : AnyObject {
   var widgetId: Swift.String { get }
   var env: Swift.String { get }
   var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
-  var metadata: Swift.String { get }
   var configs: [Swift.String : Any]? { get }
 }
 public struct DGChatCRMCredentials {
@@ -155,9 +154,6 @@ extension DGChatSDK.DGChatDelegate {
   public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
     get
   }
-  public var metadata: Swift.String {
-    get
-  }
 }
 extension DGChatSDK.DGChat {
   public static func sendMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
@@ -173,13 +169,11 @@ extension DGChatSDK.DGChat {
 @_Concurrency.MainActor @preconcurrency public struct GeniusChatView : SwiftUI.UIViewRepresentable {
   @_Concurrency.MainActor @preconcurrency public let widgetId: Swift.String
   @_Concurrency.MainActor @preconcurrency public let env: Swift.String
-  @_Concurrency.MainActor @preconcurrency public let scriptVersion: Swift.String
   @_Concurrency.MainActor @preconcurrency public let crmCredentials: DGChatSDK.DGChatCRMCredentials?
-  @_Concurrency.MainActor @preconcurrency public let metadata: Swift.String
   @_Concurrency.MainActor @preconcurrency public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
-  @_Concurrency.MainActor @preconcurrency public init(widgetId: Swift.String, env: Swift.String, scriptVersion: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, metadata: Swift.String = "", onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(widgetId: Swift.String, env: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
   @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
@@ -194,9 +188,6 @@ extension DGChatSDK.DGChat {
       get
     }
     final public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
-      get
-    }
-    final public var metadata: Swift.String {
       get
     }
     final public var configs: [Swift.String : Any]? {
