@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "DGChatSDK",
+    "printedName": "DGChatSDK",
     "children": [
       {
         "kind": "Import",
@@ -984,7 +984,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -1403,6 +1419,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1708,51 +1738,6 @@
           },
           {
             "kind": "Var",
-            "name": "metadata",
-            "printedName": "metadata",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK0A8DelegateP8metadataSSvp",
-            "mangledName": "$s9DGChatSDK0A8DelegateP8metadataSSvp",
-            "moduleName": "DGChatSDK",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK0A8DelegateP8metadataSSvg",
-                "mangledName": "$s9DGChatSDK0A8DelegateP8metadataSSvg",
-                "moduleName": "DGChatSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : DGChatSDK.DGChatDelegate>",
-                "sugared_genericSig": "<Self where Self : DGChatSDK.DGChatDelegate>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "configs",
             "printedName": "configs",
             "children": [
@@ -1998,47 +1983,6 @@
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Var",
-            "name": "metadata",
-            "printedName": "metadata",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK0A8DelegatePAAE8metadataSSvp",
-            "mangledName": "$s9DGChatSDK0A8DelegatePAAE8metadataSSvp",
-            "moduleName": "DGChatSDK",
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK0A8DelegatePAAE8metadataSSvg",
-                "mangledName": "$s9DGChatSDK0A8DelegatePAAE8metadataSSvg",
-                "moduleName": "DGChatSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : DGChatSDK.DGChatDelegate>",
-                "sugared_genericSig": "<Self where Self : DGChatSDK.DGChatDelegate>",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
           }
         ],
         "declKind": "Protocol",
@@ -2050,6 +1994,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -2185,6 +2145,22 @@
         "moduleName": "DGChatSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -2261,6 +2237,8 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV8widgetIdSSvp",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2306,6 +2284,8 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV3envSSvp",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2328,51 +2308,6 @@
                 "declKind": "Accessor",
                 "usr": "s:9DGChatSDK14GeniusChatViewV3envSSvg",
                 "mangledName": "$s9DGChatSDK14GeniusChatViewV3envSSvg",
-                "moduleName": "DGChatSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "scriptVersion",
-            "printedName": "scriptVersion",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK14GeniusChatViewV13scriptVersionSSvp",
-            "mangledName": "$s9DGChatSDK14GeniusChatViewV13scriptVersionSSvp",
-            "moduleName": "DGChatSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK14GeniusChatViewV13scriptVersionSSvg",
-                "mangledName": "$s9DGChatSDK14GeniusChatViewV13scriptVersionSSvg",
                 "moduleName": "DGChatSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -2404,6 +2339,8 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV14crmCredentialsAA0A14CRMCredentialsVSgvp",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2434,51 +2371,6 @@
                 "declKind": "Accessor",
                 "usr": "s:9DGChatSDK14GeniusChatViewV14crmCredentialsAA0A14CRMCredentialsVSgvg",
                 "mangledName": "$s9DGChatSDK14GeniusChatViewV14crmCredentialsAA0A14CRMCredentialsVSgvg",
-                "moduleName": "DGChatSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "metadata",
-            "printedName": "metadata",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK14GeniusChatViewV8metadataSSvp",
-            "mangledName": "$s9DGChatSDK14GeniusChatViewV8metadataSSvp",
-            "moduleName": "DGChatSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK14GeniusChatViewV8metadataSSvg",
-                "mangledName": "$s9DGChatSDK14GeniusChatViewV8metadataSSvg",
                 "moduleName": "DGChatSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -2523,6 +2415,8 @@
             "moduleName": "DGChatSDK",
             "declAttributes": [
               "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2670,6 +2564,8 @@
             "moduleName": "DGChatSDK",
             "declAttributes": [
               "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2817,6 +2713,8 @@
             "moduleName": "DGChatSDK",
             "declAttributes": [
               "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -2929,19 +2827,13 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(widgetId:env:scriptVersion:configs:crmCredenrials:metadata:onURLTap:onChatAction:onFailure:)",
+            "printedName": "init(widgetId:env:configs:crmCredenrials:onURLTap:onChatAction:onFailure:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "GeniusChatView",
                 "printedName": "DGChatSDK.GeniusChatView",
                 "usr": "s:9DGChatSDK14GeniusChatViewV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -2997,13 +2889,6 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -3088,10 +2973,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion7configs14crmCredenrials8metadata8onURLTap0oD6Action0O7FailureACSS_S2SSDySSypGSgAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aQ0OcSgys5Error_pcSgtcfc",
-            "mangledName": "$s9DGChatSDK14GeniusChatViewV8widgetId3env13scriptVersion7configs14crmCredenrials8metadata8onURLTap0oD6Action0O7FailureACSS_S2SSDySSypGSgAA0A14CRMCredentialsVSgSSy10Foundation3URLVcSgyAA0aQ0OcSgys5Error_pcSgtcfc",
+            "usr": "s:9DGChatSDK14GeniusChatViewV8widgetId3env7configs14crmCredenrials8onURLTap0lD6Action0L7FailureACSS_SSSDySSypGSgAA0A14CRMCredentialsVSgy10Foundation3URLVcSgyAA0aN0OcSgys5Error_pcSgtcfc",
+            "mangledName": "$s9DGChatSDK14GeniusChatViewV8widgetId3env7configs14crmCredenrials8onURLTap0lD6Action0L7FailureACSS_SSSDySSypGSgAA0A14CRMCredentialsVSgy10Foundation3URLVcSgyAA0aN0OcSgys5Error_pcSgtcfc",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
+              "Custom",
               "AccessControl"
             ],
             "init_kind": "Designated"
@@ -3127,6 +3014,7 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV10makeUIView7contextSo0G0C7SwiftUI0G20RepresentableContextVyACG_tF",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3168,6 +3056,7 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV12updateUIView_7contextySo0G0C_7SwiftUI0G20RepresentableContextVyACGtF",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3190,6 +3079,7 @@
             "mangledName": "$s9DGChatSDK14GeniusChatViewV15makeCoordinatorAC0G0CyF",
             "moduleName": "DGChatSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3431,50 +3321,6 @@
               },
               {
                 "kind": "Var",
-                "name": "metadata",
-                "printedName": "metadata",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvp",
-                "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvp",
-                "moduleName": "DGChatSDK",
-                "declAttributes": [
-                  "Final",
-                  "AccessControl"
-                ],
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvg",
-                    "mangledName": "$s9DGChatSDK14GeniusChatViewV11CoordinatorC8metadataSSvg",
-                    "moduleName": "DGChatSDK",
-                    "declAttributes": [
-                      "Final"
-                    ],
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
                 "name": "configs",
                 "printedName": "configs",
                 "children": [
@@ -3610,6 +3456,20 @@
               },
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -3665,10 +3525,26 @@
         "mangledName": "$s9DGChatSDK14GeniusChatViewV",
         "moduleName": "DGChatSDK",
         "declAttributes": [
+          "Preconcurrency",
+          "Custom",
           "AccessControl",
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "UIViewRepresentable",
@@ -3725,6 +3601,13 @@
             ],
             "usr": "s:7SwiftUI4ViewP",
             "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -4134,6 +4017,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Collection",
             "printedName": "Collection",
             "usr": "s:Sl",
@@ -4359,6 +4256,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "usr": "s:ST",
@@ -4465,6 +4376,20 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -4596,35 +4521,35 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 341,
+      "offset": 234,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 476,
+      "offset": 369,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 527,
+      "offset": 420,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 593,
+      "offset": 486,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 746,
+      "offset": 639,
       "length": 4,
       "value": "10.0"
     },
@@ -4690,20 +4615,6 @@
       "offset": 7494,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 1995,
-      "length": 7,
-      "value": "\"click\""
-    },
-    {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
-      "kind": "StringLiteral",
-      "offset": 2025,
-      "length": 12,
-      "value": "\"dimensions\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
@@ -4837,20 +4748,6 @@
       "offset": 842,
       "length": 1,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/GeniusChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 1482,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/GeniusChatView.swift",
-      "kind": "StringLiteral",
-      "offset": 2437,
-      "length": 11,
-      "value": "\"DGChatSDK.Coordinator\""
     }
   ]
 }

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -module-name DGChatSDK
 import Foundation
 import Swift
@@ -99,19 +99,11 @@ extension DGChatSDK.DGChat {
   public static func hide(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
 }
 extension DGChatSDK.DGChat {
-  #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
   public static func prepare() async -> UIKit.UIView?
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public static func added(to hostController: UIKit.UIViewController, animated: Swift.Bool = true) async -> UIKit.UIView
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public static func added(to view: UIKit.UIView, animated: Swift.Bool = true) async -> UIKit.UIView
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public static func hide(animated: Swift.Bool = true) async
-  #endif
 }
 @available(*, deprecated, message: "Please use 'DGChat' instead")
 public typealias DGChatManager = DGChatSDK.DGChat
@@ -145,7 +137,6 @@ public protocol DGChatDelegate : AnyObject {
   var widgetId: Swift.String { get }
   var env: Swift.String { get }
   var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
-  var metadata: Swift.String { get }
   var configs: [Swift.String : Any]? { get }
 }
 public struct DGChatCRMCredentials {
@@ -163,42 +154,29 @@ extension DGChatSDK.DGChatDelegate {
   public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
     get
   }
-  public var metadata: Swift.String {
-    get
-  }
 }
 extension DGChatSDK.DGChat {
   public static func sendMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   public static func sendSystemMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func sendMessage(_ message: Swift.String) async throws
-  #endif
   public static func expandWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func launchWidget() async throws
-  #endif
   public static func initProactiveButtons(values: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func initProactiveButtons(values: Swift.String) async throws
-  #endif
   public static func minimizeWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func minimizeWidget() async throws
-  #endif
 }
-public struct GeniusChatView : SwiftUI.UIViewRepresentable {
-  public let widgetId: Swift.String
-  public let env: Swift.String
-  public let scriptVersion: Swift.String
-  public let crmCredentials: DGChatSDK.DGChatCRMCredentials?
-  public let metadata: Swift.String
-  public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
-  public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
-  public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
-  public init(widgetId: Swift.String, env: Swift.String, scriptVersion: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, metadata: Swift.String = "", onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
-  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
-  @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
+@_Concurrency.MainActor @preconcurrency public struct GeniusChatView : SwiftUI.UIViewRepresentable {
+  @_Concurrency.MainActor @preconcurrency public let widgetId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public let env: Swift.String
+  @_Concurrency.MainActor @preconcurrency public let crmCredentials: DGChatSDK.DGChatCRMCredentials?
+  @_Concurrency.MainActor @preconcurrency public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public init(widgetId: Swift.String, env: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
+  @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
   @objc @_hasMissingDesignatedInitializers final public class Coordinator : ObjectiveC.NSObject, DGChatSDK.DGChatDelegate {
     final public func didTrack(action: DGChatSDK.DGChatAction)
     final public func didAttemptToOpen(url: Foundation.URL)
@@ -212,17 +190,19 @@ public struct GeniusChatView : SwiftUI.UIViewRepresentable {
     final public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
       get
     }
-    final public var metadata: Swift.String {
-      get
-    }
     final public var configs: [Swift.String : Any]? {
       get
     }
     @objc deinit
   }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = Swift.Never
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
   public typealias UIViewType = UIKit.UIView
 }
 extension DGChatSDK.DGChatAction : Swift.Equatable {}
 extension DGChatSDK.DGChatAction : Swift.Hashable {}
 extension DGChatSDK.DGChatAction : Swift.RawRepresentable {}
+extension DGChatSDK.GeniusChatView : Swift.Sendable {}
