@@ -107,14 +107,15 @@ Also, there is a support of presenting chat over UIView using ``DGChat.added(to:
 ## Using Widget metadata
 
 You can specify a `metadata`, provided by vendor for your particular business needs.
-To use that, you just need to implement proper ``DGChatDelegate`` method:
+To use that, you just need to insert `metadata` field into `configs` from ``DGChatDelegate`` method:
 
 ```swift
-var metadata: String {
-    """
-    "currentPage": "some-random-string",
-    "currentPageTitle": "another-random-string"
-    """
+var configs: [String : Any]? {
+    ["metadata": [
+      "currentPage": "some-random-string",
+      "currentPageTitle": "another-random-string"
+      ]
+   ]
 }
 ```
 
