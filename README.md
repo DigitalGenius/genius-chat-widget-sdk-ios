@@ -1,4 +1,4 @@
-# DGChatSDK
+# ``DGChatSDK``
 
 <div align="center">
    <img width="600px" src="./Sources/DGChatWidgetPackage/Resources/logo-dark.svg" alt="Logo">
@@ -16,12 +16,13 @@ iOS SDK for DigitalGenius Chat.
 
 - Xcode 14.2+
 
-
 ## Overview
 
-This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
+This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. 
+The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
 
-A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` and `scriptVersion` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
+A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` before getting started. 
+Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
 
 Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. **Originally developed using UIKit** with SiwftUI wrapper for flexibility on user end. 
 
@@ -64,17 +65,34 @@ To make everything work as expected, you'll need to implement a ``DGChatDelegate
 
 The most important and required delegate properties are:
 
+`DGChatDelegate.didTrack(action: DGChatAction)` - Provides user actions callbacks, in-chat URL opening attempt to process it inside the app, and requests configuration for SDK client which will be passed to DigitalGenius servers. 
+The list of actions
+```swift 
+    /// Called when user minimizes chat view into launcher.
+    case onChatMinimizeClick
+    /// Called when launcher icons tapped.
+    case onChatLauncherClick
+    /// Called when user presses a cross button in chat view.
+    case onChatEndClick
+    /// Called when user presses proactive button in chat view.
+    case onChatProactiveButtonClick
+    /// Called when user closes a chat's client feedback PopUp.
+    case onCSATPopoverCloseClicked
+    /// Called when user submits a feedback session-end PopUp.
+    case onCSATPopoverSubmitClicked
+    /// Called when widget success embeded, customer will be able to call launchWidget method
+    case onWidgetEmbedded
+    /// Called when widget finally launched
+    case onChatInitialised
+```
+
 `DGChatDelegate.widgetId` - which tells SDK your unique client identifier.
 
 `DGChatDelegate.env` - environment version for your particular case.
 
-`DGChatDelegate.scriptVersion` - a version of the script, used by your organization.
-
 `DGChatDelegate.configs` - List of customizable configs for SDK.
 
-All of these information is provided by a DigitalGenius Customer Success Manager. 
-
-Plase see an example implementation below:
+Plase see an example implementation below for the DGChatDelegate methods:
 
 ```swift
 var widgetId: String {
@@ -89,8 +107,6 @@ var configs: [String : Any]? {
     ["generalSettings": ["isChatLauncherEnabled": false]]
 }
 ```
-
-> ⚠️ It is highly important to provide ``DGChatDelegate.scriptVersion`` as a [Semantic versioning three-part version number](https://en.wikipedia.org/wiki/Software_versioning). Otherwise, you'll encounter runtime error.
 
 And finally, just call ``DGChat.added(to:animated:completion:)`` to present a chat button on top of specified ViewController.
 
@@ -120,6 +136,16 @@ var configs: [String : Any]? {
 ```
 
 Please note: You should stick to the formatting, provided by Vendor, otherwise `metadata` will be considered as invalid without explicit errors thrown.
+
+## Additional custom configs
+You can use config to customise your chat widget style. Eg: floating button position, proactive buttons
+
+```Swift
+var configs: [String : Any]? {
+    ["generalSettings": ["isChatLauncherEnabled": false]]
+}
+
+```
 
 ## Additional Methods
 
@@ -166,6 +192,94 @@ func minimizeWidget() async throws
 ```
 
 See [full methods list](https://docs.digitalgenius.com/docs/methods) for more details.
+
+## Launching Chat from your own UI Component
+
+If you prefer to launch the chat widget from your UI element (eg: UIButton) rather than using the default SDK launcher, follow these steps:
+1. Hide the launcher with this custome config from chat delegate
+You can hide the default launcher button by adding the following configuration inside  ``DGChatDelegate.configs``
+```
+var configs: [String : Any]? {
+     ["generalSettings": ["isChatLauncherEnabled": false]]
+ }
+```
+
+2. Initialize the Chat SDK
+Initialize the chat SDK by calling the DGChat.added(to:) function. Then, set the delegate for the SDK by calling DGChat.delegate. To listen for the DGChatAction.onWidgetEmbedded event, implement the DGChatDelegate.didTrack(action:) method. 
+
+4. Manually Launch the Chat Widget
+After the SDK is successfully embedded in your application, you can manually launch the chat widget by calling the ``expandWidget(_ completion:)`` function attach to your
+
+Below is a complete example of how to configure the SDK to manually launch the chat widget
+```swift
+class ChatViewController: UIViewController, DGChatDelegate {
+    
+    // Lazy var UIButton with title 'Chat with us'
+    lazy var chatButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Chat with us", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        // Add action to button for touchUpInside event
+        button.addTarget(self, action: #selector(chatButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up Chat
+        DGChat.delegate = self
+        DGChat.added(to: self) { chatView in
+            print("DGChatView is presented now with frame \(chatView.frame)")
+        }
+
+        // Add the button to the view hierarchy
+        view.addSubview(chatButton)
+        chatButton.isEnabled = false
+        // Set up button constraints (bottom and trailing)
+        NSLayoutConstraint.activate([
+            chatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            chatButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            chatButton.widthAnchor.constraint(equalToConstant: 150),
+            chatButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    // Action function for the button
+    @objc func chatButtonTapped() {
+        DGChat.expandWidget { result in
+            // handle result
+        }
+    }
+    
+
+    // MARK: - DGChatDelegate
+    func didTrack(action: DGChatSDK.DGChatAction) {
+        switch action {
+        case .onWidgetEmbedded:
+            chatButton.isEnabled = true
+        default:
+            break
+        }
+        print("Action track:", action)
+    }
+    
+    func didFailWith(error: Error) {
+        // SDK got error
+    }
+    
+    var widgetId: String {
+        // Client identifier (Widget Identifier) provided by vendor company.
+    }
+    
+    var env: String {
+        // Environment value provided by vendor company.
+    }
+    
+    var configs: [String : Any]? {
+        ["generalSettings": ["isChatLauncherEnabled": false]]
+    }
+}
+```
 
 ## Full screen support
 By default, when the Chat View is added using the standard `DGChat.added(to: self)`  method, it remains within the view boundaries and does not extend over the status bar (which contains the user’s battery level, clock etc. and dynamic island)<br/>
@@ -215,7 +329,7 @@ is that completion closure produces UIView object which is a reference to an ove
 
 Example on how that UIView can be manipulated can be found in `CustomAnimationController.swift`.  
 
-### SwiftUI
+# SwiftUI
 
 If you are using SwiftUI for your project, please use `GeniusChatView` as listed on the example below:
 
@@ -224,8 +338,7 @@ var body: some View {
     VStack {
         GeniusChatView(
             widgetId: "your_widget_id",
-            env: "some.env",
-            scriptVersion: "1.1.0")
+            env: "some.env")
     }
     .padding()
 }
@@ -235,7 +348,7 @@ var body: some View {
 
 `GeniusChatView` supports all the same methods of DGChatSDK.
 
-### ReactNative
+# ReactNative
 
 To use Genius SDK in ReactNative projects, please follow these steps:
 
