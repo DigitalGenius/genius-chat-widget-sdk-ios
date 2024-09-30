@@ -3,19 +3,24 @@ import DGChatSDK
 
 struct ContentView: View {
     
+    /// Sample configs
+    private let configs = ["generalSettings": ["isChatLauncherEnabled": false]]
+    
     var body: some View {
         VStack {
             GeniusChatView(
                 widgetId: "\(fatalError("Place your widged id here"))",
                 env: "\(fatalError("Place your widged id here"))",
-                scriptVersion: "\(fatalError("script version is required"))",
+                configs: ["generalSettings": ["isChatLauncherEnabled": false]]
                 // .init(platform: "your CRM platform here", version: "your CRM version here")
-                crmCredenrials: nil, // optional, line could be removed if not used
-                onChatAction: { action in
-                    print("Chat action", action)
+            )
+            .padding()
+            Button("Chat with us", action: {
+                DGChat.expandWidget({ result in
+                    // Handle the method action result here
                 })
+            })
         }
-        .padding()
     }
 }
 
