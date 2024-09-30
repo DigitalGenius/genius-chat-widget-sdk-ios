@@ -21,7 +21,7 @@ iOS SDK for DigitalGenius Chat.
 
 This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
 
-A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` and `scriptVersion` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
+A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
 
 Please note - this SDK is designed to work for both - UIKit and SwiftUI apps. **Originally developed using UIKit** with SiwftUI wrapper for flexibility on user end. 
 
@@ -68,8 +68,6 @@ The most important and required delegate properties are:
 
 `DGChatDelegate.env` - environment version for your particular case.
 
-`DGChatDelegate.scriptVersion` - a version of the script, used by your organization.
-
 `DGChatDelegate.configs` - List of customizable configs for SDK.
 
 All of these information is provided by a DigitalGenius Customer Success Manager. 
@@ -89,8 +87,6 @@ var configs: [String : Any]? {
     ["generalSettings": ["isChatLauncherEnabled": false]]
 }
 ```
-
-> ⚠️ It is highly important to provide ``DGChatDelegate.scriptVersion`` as a [Semantic versioning three-part version number](https://en.wikipedia.org/wiki/Software_versioning). Otherwise, you'll encounter runtime error.
 
 And finally, just call ``DGChat.added(to:animated:completion:)`` to present a chat button on top of specified ViewController.
 
@@ -224,8 +220,7 @@ var body: some View {
     VStack {
         GeniusChatView(
             widgetId: "your_widget_id",
-            env: "some.env",
-            scriptVersion: "1.1.0")
+            env: "some.env"
     }
     .padding()
 }
@@ -234,6 +229,28 @@ var body: some View {
 `GeniusChatView` is SwiftUI View which is a wrapper for UIKit code of DGChatSDK using Apple's [Coordinator pattern](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit). 
 
 `GeniusChatView` supports all the same methods of DGChatSDK.
+If you hide the SDK launcher button, and use your own button to show the chat widget, like a `Chat with us` button.
+Consider adding configs to hide launcher button, then add your custom button to call function ``DGChat.expandWidget(completion:)`` to manually show the chat widget
+Here the exmaple
+
+```swift
+var body: some View {
+    VStack {
+        GeniusChatView(
+            widgetId: "your_widget_id",
+            env: "some.env",
+            configs: ["generalSettings": ["isChatLauncherEnabled": false]] // configs send to SDK to hide the launch button
+            // .init(platform: "your CRM platform here", version: "your CRM version here")
+        )
+        .padding()
+        Button("Chat with us", action: {
+            DGChat.expandWidget({ result in
+                // Handle the method action result here
+            })
+        })
+    }
+}
+```
 
 ### ReactNative
 
