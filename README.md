@@ -132,9 +132,16 @@ func sendMessage(_ message: String) async throws
 The `sendSystemMessage` method allows the customer to programmatically send a message to system. This method is only available after the chat has been embeded:
 
 ```swift
-func sendSystemMessage(_ message: String, completion: @escaping (Result<Void, Error>) -> Void)
+func sendSystemMessage(_ message: [String: Any], completion: @escaping (Result<Void, Error>) -> Void)
 
-func sendSystemMessage(_ message: String) async throws
+func sendSystemMessage(_ message: [String: Any]) async throws
+```
+For example:
+```
+let payload = ["name": "auth_token", "payload": "your_jwt_token"]
+DGChat.sendSystemMessage(payload, completion: { result in
+    // handle result here
+})
 ```
 
 The `launchWidget` method allows the customer to programmatically launch the widget:
