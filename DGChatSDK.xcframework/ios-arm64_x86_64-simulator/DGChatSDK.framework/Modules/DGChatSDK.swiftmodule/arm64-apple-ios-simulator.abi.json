@@ -1472,6 +1472,46 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "onChatInitialisedError",
+            "printedName": "onChatInitialisedError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DGChatSDK.DGChatAction.Type) -> DGChatSDK.DGChatAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DGChatAction",
+                    "printedName": "DGChatSDK.DGChatAction",
+                    "usr": "s:9DGChatSDK0A6ActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DGChatSDK.DGChatAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DGChatAction",
+                        "printedName": "DGChatSDK.DGChatAction",
+                        "usr": "s:9DGChatSDK0A6ActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9DGChatSDK0A6ActionO22onChatInitialisedErroryA2CmF",
+            "mangledName": "$s9DGChatSDK0A6ActionO22onChatInitialisedErroryA2CmF",
+            "moduleName": "DGChatSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -3749,6 +3789,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "DGChatSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "BidirectionalCollection",
         "printedName": "BidirectionalCollection",
@@ -4756,14 +4806,14 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 1995,
+      "offset": 2072,
       "length": 7,
       "value": "\"click\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 2025,
+      "offset": 2102,
       "length": 12,
       "value": "\"dimensions\""
     },
@@ -4868,21 +4918,21 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2534,
+      "offset": 2600,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2574,
+      "offset": 2640,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17120,
+      "offset": 17403,
       "length": 1,
       "value": "0"
     },

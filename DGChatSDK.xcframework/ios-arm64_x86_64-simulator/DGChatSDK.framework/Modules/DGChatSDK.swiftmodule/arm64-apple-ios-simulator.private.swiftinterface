@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -module-name DGChatSDK
 import Foundation
+import Network
 import Swift
 import SwiftUI
 import UIKit
@@ -116,6 +117,7 @@ public enum DGChatAction : Swift.String {
   case onCSATPopoverSubmitClicked
   case onWidgetEmbedded
   case onChatInitialised
+  case onChatInitialisedError
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
