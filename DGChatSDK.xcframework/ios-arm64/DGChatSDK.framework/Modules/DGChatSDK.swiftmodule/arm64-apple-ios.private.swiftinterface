@@ -166,6 +166,8 @@ extension DGChatSDK.DGChat {
   public static func initProactiveButtons(values: Swift.String) async throws
   public static func minimizeWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   public static func minimizeWidget() async throws
+  public static func resetChat(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  public static func resetChat() async throws
 }
 @_Concurrency.MainActor @preconcurrency public struct GeniusChatView : SwiftUI.UIViewRepresentable {
   @_Concurrency.MainActor @preconcurrency public let widgetId: Swift.String

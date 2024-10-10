@@ -144,6 +144,21 @@ DGChat.sendSystemMessage(payload, completion: { result in
 })
 ```
 
+The `resetChat` method allows the customer to resets the chat and clears the conversation/session and minimizes the widget so next time the widget is launched it's a fresh conversation.
+
+```swift
+func resetChat(ompletion: @escaping (Result<Void, Error>) -> Void)
+
+func resetChat() async throws
+```
+For example:
+```
+let payload = ["name": "auth_token", "payload": "your_jwt_token"]
+DGChat.resetChat { result in
+    // handle result here
+}
+```
+
 The `launchWidget` method allows the customer to programmatically launch the widget:
 
 ```swift
