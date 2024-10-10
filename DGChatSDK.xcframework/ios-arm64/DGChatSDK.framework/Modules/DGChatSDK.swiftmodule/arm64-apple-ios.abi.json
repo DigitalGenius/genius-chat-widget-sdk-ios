@@ -1031,6 +1031,86 @@
             "isFromExtension": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetChat",
+            "printedName": "resetChat(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9DGChatSDK0A0C9resetChatyyys6ResultOyyts5Error_pGcFZ",
+            "mangledName": "$s9DGChatSDK0A0C9resetChatyyys6ResultOyyts5Error_pGcFZ",
+            "moduleName": "DGChatSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetChat",
+            "printedName": "resetChat()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9DGChatSDK0A0C9resetChatyyYaKFZ",
+            "mangledName": "$s9DGChatSDK0A0C9resetChatyyYaKFZ",
+            "moduleName": "DGChatSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1386,6 +1466,46 @@
             "declKind": "EnumElement",
             "usr": "s:9DGChatSDK0A6ActionO17onChatInitialisedyA2CmF",
             "mangledName": "$s9DGChatSDK0A6ActionO17onChatInitialisedyA2CmF",
+            "moduleName": "DGChatSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onChatInitialisedError",
+            "printedName": "onChatInitialisedError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DGChatSDK.DGChatAction.Type) -> DGChatSDK.DGChatAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DGChatAction",
+                    "printedName": "DGChatSDK.DGChatAction",
+                    "usr": "s:9DGChatSDK0A6ActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DGChatSDK.DGChatAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DGChatAction",
+                        "printedName": "DGChatSDK.DGChatAction",
+                        "usr": "s:9DGChatSDK0A6ActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9DGChatSDK0A6ActionO22onChatInitialisedErroryA2CmF",
+            "mangledName": "$s9DGChatSDK0A6ActionO22onChatInitialisedErroryA2CmF",
             "moduleName": "DGChatSDK",
             "declAttributes": [
               "RawDocComment"
@@ -3669,6 +3789,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "DGChatSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "BidirectionalCollection",
         "printedName": "BidirectionalCollection",
@@ -4676,14 +4806,14 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 1995,
+      "offset": 2072,
       "length": 7,
       "value": "\"click\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatAction.swift",
       "kind": "StringLiteral",
-      "offset": 2025,
+      "offset": 2102,
       "length": 12,
       "value": "\"dimensions\""
     },
@@ -4766,36 +4896,43 @@
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
+      "kind": "Array",
+      "offset": 1866,
+      "length": 17,
+      "value": "[\"tel\", \"mailto\"]"
+    },
+    {
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "FloatLiteral",
-      "offset": 2391,
+      "offset": 2454,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "FloatLiteral",
-      "offset": 2397,
+      "offset": 2460,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2471,
+      "offset": 2600,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2511,
+      "offset": 2640,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 16714,
+      "offset": 17403,
       "length": 1,
       "value": "0"
     },
