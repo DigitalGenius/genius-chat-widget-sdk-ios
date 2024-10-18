@@ -118,6 +118,7 @@ public enum DGChatAction : Swift.String {
   case onWidgetEmbedded
   case onChatInitialised
   case onChatInitialisedError
+  case newConversationStarted
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
