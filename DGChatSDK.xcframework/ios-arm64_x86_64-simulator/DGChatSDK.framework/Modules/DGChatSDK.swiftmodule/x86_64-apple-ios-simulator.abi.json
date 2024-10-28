@@ -863,7 +863,7 @@
           {
             "kind": "Function",
             "name": "initProactiveButtons",
-            "printedName": "initProactiveButtons(values:completion:)",
+            "printedName": "initProactiveButtons(questions:answers:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -872,9 +872,31 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
               },
               {
                 "kind": "TypeFunc",
@@ -909,8 +931,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:9DGChatSDK0A0C20initProactiveButtons6values10completionySS_ys6ResultOyyts5Error_pGctFZ",
-            "mangledName": "$s9DGChatSDK0A0C20initProactiveButtons6values10completionySS_ys6ResultOyyts5Error_pGctFZ",
+            "usr": "s:9DGChatSDK0A0C20initProactiveButtons9questions7answers10completionySaySSG_AHys6ResultOyyts5Error_pGctFZ",
+            "mangledName": "$s9DGChatSDK0A0C20initProactiveButtons9questions7answers10completionySaySSG_AHys6ResultOyyts5Error_pGctFZ",
             "moduleName": "DGChatSDK",
             "static": true,
             "declAttributes": [
@@ -924,7 +946,7 @@
           {
             "kind": "Function",
             "name": "initProactiveButtons",
-            "printedName": "initProactiveButtons(values:)",
+            "printedName": "initProactiveButtons(questions:answers:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -933,14 +955,36 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:9DGChatSDK0A0C20initProactiveButtons6valuesySS_tYaKFZ",
-            "mangledName": "$s9DGChatSDK0A0C20initProactiveButtons6valuesySS_tYaKFZ",
+            "usr": "s:9DGChatSDK0A0C20initProactiveButtons9questions7answersySaySSG_AGtYaKFZ",
+            "mangledName": "$s9DGChatSDK0A0C20initProactiveButtons9questions7answersySaySSG_AGtYaKFZ",
             "moduleName": "DGChatSDK",
             "static": true,
             "declAttributes": [
