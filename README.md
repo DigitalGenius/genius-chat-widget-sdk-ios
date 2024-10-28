@@ -170,9 +170,9 @@ func launchWidget() async throws
 The `initProactiveButtons` method allows the customer to programmatically trigger the proactive buttons to display:
 
 ```swift
-func initProactiveButtons(values: String, completion: @escaping (Result<Void, Error>) -> Void)
+func initProactiveButtons(questions: [String], answers: [String], completion: @escaping (Result<Void, Error>) -> Void)
 
-func initProactiveButtons(values: String) async throws
+func initProactiveButtons(questions: [String], answers: [String]) async throws
 ```
 
 The `minimizeWidget` method allows customer to minimise an expanded chat UI to the "launcher" state programmatically:
