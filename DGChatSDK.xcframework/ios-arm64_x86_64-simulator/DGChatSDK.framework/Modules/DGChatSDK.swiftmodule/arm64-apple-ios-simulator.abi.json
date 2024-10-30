@@ -19,6 +19,13 @@
         "moduleName": "DGChatSDK"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DGChatSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "DGChat",
         "printedName": "DGChat",
@@ -4806,98 +4813,105 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 234,
+      "offset": 247,
       "length": 13,
       "value": "\"{{VERSION}}\""
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 369,
+      "offset": 382,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 433,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 486,
+      "offset": 499,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 639,
+      "offset": 652,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 689,
+      "offset": 474,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
+      "kind": "BooleanLiteral",
+      "offset": 766,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 1438,
+      "offset": 1515,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 3029,
+      "offset": 3106,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 4862,
+      "offset": 4939,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5361,
+      "offset": 5438,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5787,
+      "offset": 5864,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 6606,
+      "offset": 6683,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7127,
+      "offset": 7204,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7579,
+      "offset": 7656,
       "length": 4,
       "value": "true"
     },
@@ -5030,7 +5044,7 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChatView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17403,
+      "offset": 17765,
       "length": 1,
       "value": "0"
     },
