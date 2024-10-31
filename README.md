@@ -1,24 +1,12 @@
 # DGChatSDK
 
-<div align="center">
-   <img width="600px" src="./Sources/DGChatWidgetPackage/Resources/logo-dark.svg" alt="Logo">
-</div>
-
-<!--![DigitalGeniusLogo](logo-dark.svg)-->
-
 iOS SDK for DigitalGenius Chat.
-
-## 🏷 License
-
-`DGChatSDK` is a property of DigitalGenius Ltd.
 
 ### Requirements
 
-- Xcode 14.2+
-
+- Xcode 14.2 or later
 
 ## Overview
-
 This SDK enables the DigitalGenius Chat Widget to be embedded anywhere inside an iOS app. The SDK requires minimal setup. Please refer `Demo.xcworkspace` for an example.
 
 A DigitalGenius Customer Success Manager will provide you with a `widgetId`, `env` before getting started. Please see the `Integrating SDK to your project` section for details on how to integrate following settings into an iOS app using the SDK.
@@ -138,7 +126,7 @@ func sendSystemMessage(_ message: [String: Any]) async throws
 ```
 For example:
 ```
-let payload = ["name": "auth_token", "payload": "your_jwt_token"]
+let payload = ["message": "special message", "payload": "some data"]
 DGChat.sendSystemMessage(payload, completion: { result in
     // handle result here
 })
@@ -185,6 +173,23 @@ func minimizeWidget() async throws
 
 See [full methods list](https://docs.digitalgenius.com/docs/methods) for more details.
 
+## Authenticating Users
+### Generating JWT
+Please follow the instruction in this [link](https://docs.digitalgenius.com/docs/passing-authenticated-user-data) to generate authentication token
+### Passing the token to the chat widget
+Once you have generated the jwt you can pass it to the chat widget as an input via the chat widget configs:
+```
+var configs: [String : Any]? {
+    ["metadata": ["auth_token": "YOUR_AUTH_TOKEN"]]
+}
+```
+If your token is short lived it is possible to send updated tokens by sending a system message like so:
+```
+let payload = ["name": "auth_token", "payload": "YOUR_AUTH_TOKEN"]
+DGChat.sendSystemMessage(payload, completion: { result in
+    // handle result here
+})
+```
 ## Full screen support
 By default, when the Chat View is added using the standard `DGChat.added(to: self)`  method, it remains within the view boundaries and does not extend over the status bar (which contains the user’s battery level, clock etc. and dynamic island)<br/>
 
