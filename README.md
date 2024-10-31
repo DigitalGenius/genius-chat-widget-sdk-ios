@@ -177,7 +177,7 @@ See [full methods list](https://docs.digitalgenius.com/docs/methods) for more de
 ### Generating JWT
 Please follow the instruction in this [link](https://docs.digitalgenius.com/docs/passing-authenticated-user-data) to generate authentication token
 ### Passing the token to the chat widget
-Once you have generated the jwt you can pass it to the chat widget as an input via the chat widget config defined in your page:
+Once you have generated the jwt you can pass it to the chat widget as an input via the chat widget configs:
 ```
 var configs: [String : Any]? {
     ["metadata": ["auth_token": "YOUR_AUTH_TOKEN"]]
