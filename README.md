@@ -19,13 +19,47 @@ For more details on SwiftUI usage, please refer to [SwiftUI](# SwiftUI) document
 
 DGChatSDK is configured to be used exclusively with **Swift Package Manager** (SPM).
 
+### Installing from Xcode
+
+ - Add a package by selecting `File` → `Add Packages…` in Xcode’s menu bar.
+ <img src="Resources/add_package_menu.png">
+
+ - Search for the Digital Genius Widget SDK using the repo's URL:
+    ```console
+    https://github.com/DigitalGenius/genius-chat-widget-sdk-ios
+    ```
+ - Next, set the **Dependency Rule** to be `Up to Next Major Version`. This will choose latest version by default.
+ <img src="Resources/add_package.png">
+
+ - Then, select **Add Package**.
+
+### Alternatively, add DGChatSDK to a `Package.swift` manifest
+
 To get started, add the DGChatSDK package as a dependency to your project:
 
-    .package(url: "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git", from: "1.0.0"),
+```swift
+dependencies: [
+  .package(
+    name: "DGChatSDK",
+    url: "https://github.com/DigitalGenius/genius-chat-widget-sdk-ios.git",
+    .upToNextMajor(from: "3.3.2")
+  ),
 
-If you're inlcuding this package as a dependency inside your package, add it to your target using:
+  // Any other dependencies you have...
+],
+```
 
-    .product(name: "DGChatSDK", package: "DGChatSDK"),
+Then, in any target that depends on a DGChat SDK product, add it to the `dependencies`
+array of that target:
+
+```swift
+.target(
+  name: "MyTargetName",
+  dependencies: [
+    .product(name: "ProductName", package: "DGChatSDK"),
+  ]
+),
+```
 
 If you experiencing any troubles with SPM installation or updates, please try following [manual](TROUBLESHOOTING.md) before submitting a new bug.
 

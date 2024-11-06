@@ -32,54 +32,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "isPresented",
-            "printedName": "isPresented",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9DGChatSDK0A0C11isPresentedSbvpZ",
-            "mangledName": "$s9DGChatSDK0A0C11isPresentedSbvpZ",
-            "moduleName": "DGChatSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9DGChatSDK0A0C11isPresentedSbvgZ",
-                "mangledName": "$s9DGChatSDK0A0C11isPresentedSbvgZ",
-                "moduleName": "DGChatSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "delegate",
             "printedName": "delegate",
             "children": [
@@ -4855,63 +4807,63 @@
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 766,
+      "offset": 815,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 1515,
+      "offset": 1677,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 3106,
+      "offset": 3317,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 4939,
+      "offset": 5252,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5438,
+      "offset": 5751,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 5864,
+      "offset": 6177,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 6683,
+      "offset": 6996,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7204,
+      "offset": 7517,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maiquan\/Documents\/Work\/Digiruu\/digital_genius\/develop_repo\/Sources\/DGChatSDK\/DGChat.swift",
       "kind": "BooleanLiteral",
-      "offset": 7656,
+      "offset": 7969,
       "length": 4,
       "value": "true"
     },
