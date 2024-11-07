@@ -85,9 +85,6 @@ extension Swift.BidirectionalCollection where Self == Self.SubSequence {
   @objc deinit
 }
 extension DGChatSDK.DGChat {
-  public static var isPresented: Swift.Bool {
-    get
-  }
   public static var delegate: (any DGChatSDK.DGChatDelegate)? {
     get
     set
