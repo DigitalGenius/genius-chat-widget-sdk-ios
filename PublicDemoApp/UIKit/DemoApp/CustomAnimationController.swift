@@ -54,52 +54,16 @@ extension CustomAnimationController {
         visibilityButton.setSpinner(shown: true)
         // Check if we must use a custom animation
         if toggle.useCustomAnimation {
-            let animationDuration = TimeInterval(0.5)
             // Present ChatView overlay
             DGChat.prepare { [weak self] overlay in
                 // Capture self pointer
-                guard let this = self, let overlay else { return }
+                guard let this = self else { return }
                 
                 // Stop spinner
                 this.visibilityButton.setSpinner(shown: false)
-
-                let hiddenStateTransform = CGAffineTransform(
-                    translationX: 0,
-                    y: (this.view.window?.windowScene?.screen.bounds.height ?? 0)
-                )
-                
-                if !DGChat.isPresented { // Show
-                    overlay.alpha = 0.0
-                    if overlay.superview == nil {
-                        this.view.addSubview(overlay)
-                    }
-                    overlay.frame = this.view.bounds
-                    overlay.transform = hiddenStateTransform
-                    overlay.alpha = 1.0
-                    UIView.animate(withDuration: animationDuration) {
-                        overlay.transform = .identity
-                    }
-                } else { // Hide
-                    UIView.animate(withDuration: animationDuration, animations: {
-                        overlay.transform = hiddenStateTransform
-                    }, completion: { done in
-                        if done { overlay.alpha = 0.0 }
-                    })
-                }
             }
         } else {
             self.visibilityButton.setSpinner(shown: true)
-            // Hiding overlay if it was already presented
-            if DGChat.isPresented {
-                DGChat.hide { [weak self] in
-                    self?.visibilityButton.setSpinner(shown: false)
-                }
-            } else {
-                // Presenting overlay with default animation
-                DGChat.added(to: self) { [weak self] _ in
-                    self?.visibilityButton.setSpinner(shown: false)
-                }
-            }
         }
     }
 }

@@ -91,10 +91,6 @@ extension ControlsView {
     }
     
     @objc func hideWidget() {
-        guard DGChat.isPresented else {
-            print("Looks like ChatView is not presented yet...")
-            return
-        }
         DGChat.hide(animated: true) {
             print("ChatView must be hidden now")
         }
