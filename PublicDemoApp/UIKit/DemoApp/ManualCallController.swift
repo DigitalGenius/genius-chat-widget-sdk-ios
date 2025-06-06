@@ -60,12 +60,6 @@ final class ManualCallController: UIViewController {
 extension ManualCallController {
     
     @objc private func showChatView() {
-        // Check if ChatView is not presented yet.
-        // This check is optional, just for Demo purpose. Actual check is also being done inside SDK as well.
-        if DGChat.isPresented {
-            print("Looks like ChatView is already presented")
-            return
-        }
         // Start animating button's spinner
         startButton.setSpinner(shown: true)
         // Present ChatView overlay
