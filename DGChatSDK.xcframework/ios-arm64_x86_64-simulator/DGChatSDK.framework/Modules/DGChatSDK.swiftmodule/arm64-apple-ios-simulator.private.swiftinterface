@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -module-name DGChatSDK
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import Foundation
 import Network
 import Swift
@@ -86,20 +86,32 @@ extension Swift.BidirectionalCollection where Self == Self.SubSequence {
   @objc deinit
 }
 extension DGChatSDK.DGChat {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static var delegate: (any DGChatSDK.DGChatDelegate)? {
     get
     set
   }
+  #endif
 }
 extension DGChatSDK.DGChat {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func prepare(_ completion: ((UIKit.UIView?) -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func added(to hostController: UIKit.UIViewController, animated: Swift.Bool = true, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func added(to view: UIKit.UIView, animted: Swift.Bool = true, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func hide(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  #endif
 }
 extension DGChatSDK.DGChat {
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public static func prepare() async -> UIKit.UIView?
+  #endif
   public static func added(to hostController: UIKit.UIViewController, animated: Swift.Bool = true) async -> UIKit.UIView
   public static func added(to view: UIKit.UIView, animated: Swift.Bool = true) async -> UIKit.UIView
   public static func hide(animated: Swift.Bool = true) async
@@ -117,7 +129,9 @@ public enum DGChatAction : Swift.String {
   case onChatInitialised
   case onChatInitialisedError
   case newConversationStarted
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -137,8 +151,12 @@ public protocol DGChatDelegate : AnyObject {
   func didFailWith(error: any Swift.Error)
   var widgetId: Swift.String { get }
   var env: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var crmCredentials: DGChatSDK.DGChatCRMCredentials? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var configs: [Swift.String : Any]? { get }
+  #endif
 }
 public struct DGChatCRMCredentials {
   public let platform: Swift.String
@@ -152,22 +170,36 @@ extension DGChatSDK.DGChatDelegate {
   public func didTrack(action: DGChatSDK.DGChatAction)
   public func didAttemptToOpen(url: Foundation.URL)
   public func didFailWith(error: any Swift.Error)
+  #if compiler(>=5.3) && $NonescapableTypes
   public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
     get
   }
+  #endif
 }
 extension DGChatSDK.DGChat {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func sendMessage(_ message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func sendSystemMessage(_ message: [Swift.String : Any], completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func sendSystemMessage(_ message: [Swift.String : Any]) async throws
   public static func sendMessage(_ message: Swift.String) async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func expandWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func launchWidget() async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func initProactiveButtons(questions: [Swift.String], answers: [Swift.String], completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func initProactiveButtons(questions: [Swift.String], answers: [Swift.String]) async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func minimizeWidget(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func minimizeWidget() async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func resetChat(_ completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func resetChat() async throws
 }
 @_Concurrency.MainActor @preconcurrency public struct GeniusChatView : SwiftUI.UIViewRepresentable {
@@ -177,7 +209,9 @@ extension DGChatSDK.DGChat {
   @_Concurrency.MainActor @preconcurrency public var onURLTap: ((_ url: Foundation.URL) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency public var onChatAction: ((_ action: DGChatSDK.DGChatAction) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency public var onFailure: ((_ error: any Swift.Error) -> Swift.Void)?
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(widgetId: Swift.String, env: Swift.String, configs: [Swift.String : Any]? = nil, crmCredenrials: DGChatSDK.DGChatCRMCredentials? = nil, onURLTap: ((Foundation.URL) -> Swift.Void)? = nil, onChatAction: ((DGChatSDK.DGChatAction) -> Swift.Void)? = nil, onFailure: ((any Swift.Error) -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: DGChatSDK.GeniusChatView.Context) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: DGChatSDK.GeniusChatView.Context)
   @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> DGChatSDK.GeniusChatView.Coordinator
@@ -191,12 +225,16 @@ extension DGChatSDK.DGChat {
     final public var env: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     final public var crmCredentials: DGChatSDK.DGChatCRMCredentials? {
       get
     }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     final public var configs: [Swift.String : Any]? {
       get
     }
+    #endif
     @objc deinit
   }
   public typealias Body = Swift.Never
